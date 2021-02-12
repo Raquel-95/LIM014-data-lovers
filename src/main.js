@@ -20,7 +20,7 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 function crear_episodios (){
   let episodios = document.getElementById("episodios");
-  for (let i = 1; i<=31; i++) {
+  for (let i = 1; i<=493; i++) {
     let option = document.createElement("option");//1° crear elemento de tipo option.
     let textnode = document.createTextNode(i);// 2° crear elemento de tipo texto.
     option.appendChild(textnode); //3° agrega el elemnto de texto dentro de elemento option.

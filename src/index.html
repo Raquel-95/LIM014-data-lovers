@@ -14,12 +14,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--para que es esto?-->
   </head>
   <body class="background" >
+
+
     <header>
       <div class="boxName">
         <img class="icon" src="images/rickMortyIcon.png" alt="Icono Rick y Morty">
         <img class="logotipe" src="images/rickMortyLogotipe.png" alt="Logotipo de Rick y Morty"  width="149" height= "467";>
       </div>
     </header>
+
+
     <nav class="barNavegation">
       <ul class="buttonsNavegation"><!-- Flex container -->
         <!-- Attribute Values
@@ -32,17 +36,22 @@
       </ul>
     </nav>
 
+    <nav>
+      <section class="nameOrder">
+        <section>
+          <input type="search" placeHolder="Search by name" id="searchByName" src= "images/assets/lupa.png" ></input>
+        </section>
 
-    <section class="nameOrder">
-    <section>
-      <input type="search" placeHolder="Search by name" id="searchByName" src= "images/assets/lupa.png" ></input>
-    </section>
+        <select id="order">
+          <option hidden selected> Order </option>
+          <option>A - Z</option>
+          <option>Z - A</option>
+          <option>By default</option>
+        </select>
 
-      <select id="order">
-        <option>A - Z</option>
-        <option>Z - A</option>
-      </select>
-    </section>
+      </section>
+    </nav>
+
     <section id="advancedFilter">
       <p><b>Filter:</b></p>
       <p>Status</p>
@@ -136,34 +145,54 @@
         <option>Unknown</option>
       </select></br>
       <p>Episode</p>
+
       <select id="episodios">
         <option>--Selecionar--</option>
       </select>
     </section>
 
-      <article class="cards" id="cards">
-       <!-- <figure class="card">
-          <img src="" alt="">
-          <figcaption>Rick</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="" alt="">
-          <figcaption>Morty</figcaption>
-        </figure>
-        <figure class="card">
-          <img src="" alt="">
-          <figcaption>Beth</figcaption>
-        </figure>-->
+   <main>
+      <article class="cards hide" id="cards">
+        <!-- <figure class="card">
+            <img src="" alt="">
+            <figcaption>Rick</figcaption>
+          </figure>-->
       </article>
 
-      <div id="root"></div>
-      <script src="main.js" type="module"></script>
+    <a href="#myModal">Abrir Modal</a>
+    <div id = "myModal" class="modal">
+      <div class="modalContent">
+        <a href="#">X</a>
+        <h2>Identification card</h2>
+        <p>Status:</p>
+        <p>Species:</p>
+        <p>Gender:</p>
+        <p>Origin:</p>
+        <p>Episode:</p>
+      </div>
+    </div>
+
+      <article class="hide" id="searchContainer">
+        <div id="searchResults"></div>
+      </article>
+
+      <article class="hide" id="characterAlive">
+        <div id="insertCharacterAlive"></div>
+      </article>
+
+      <article class="hide" id="characterDead">
+        <div id="insertCharacterDead"></div>
+      </article>
+
+
+
+   </main>
     <footer>
        <ul class="socialBars">
         <!-- Attribute Values
           _blank	Opens the linked document in a new window or tab
            -->
-          <li class=""><a href="https://www.facebook.com/RickandMorty/"  target="_blank" class="fa fa-facebook" "></a></li>
+          <li class=""><a href="https://www.facebook.com/RickandMorty/"  target="_blank" class="fa fa-facebook" ></a></li>
           <li class=""><a href="https://twitter.com/rickandmorty"  target="_blank" class="fa fa-twitter-square" href="#"></a></li>
           <li class=""><a href="https://www.instagram.com/rickandmorty/?hl=es" target="_blank" class="fa fa-instagram"  ></a></li>
       </ul>
@@ -173,5 +202,6 @@
       </div>
     </footer>
     <script src="main.js" type="module"></script>
+    <script  src="data.js" type="module"></script>
   </body>
 </html>

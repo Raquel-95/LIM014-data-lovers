@@ -64,7 +64,7 @@
 /* modal */
 .modalContent{
   background-color:white;
-  width:700px;
+  width:300px;
   padding: 10px 20px;
   margin: 20% auto;
   position: relative;
@@ -85,20 +85,8 @@
   pointer-events:auto;
 }
 
-#informationModal{
-display: flex;
-flex-direction: column;
-}
 
-.paragraphModal{
-  display: flex;
-  flex-direction: column;
-}
-
-#photoModal{
- height: 250px;
- width: 250px;
-}
+  
   
   /* header flex :D******************************* */
   /* header******************************* */

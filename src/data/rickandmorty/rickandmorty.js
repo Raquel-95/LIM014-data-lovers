@@ -1,3 +1,4 @@
+// Declara un elemento y lo añade como módulo de exportación por defecto.
 export default {
   "info": {
       "count": 493,

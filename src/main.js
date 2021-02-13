@@ -1,6 +1,6 @@
-// import { example } from './data.js';
-// // import data from './data/lol/lol.js';
-// //import data from './data/pokemon/pokemon.js';
+import { example } from './data.js';
+// import data from './data/lol/lol.js';
+import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 // console.log(example());
@@ -84,3 +84,4 @@ function loadAll (){ //función para cargar/mostrar las tarjetas.
   characterName.innerHTML = "Name: " + item.name; // innetHTML se usa para cambiar el valor de un p.
 
 }
+

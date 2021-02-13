@@ -51,13 +51,5 @@ export const orderByName=(array,string1)=>{
 
 
 
-const searchNames= document.querySelector('#searchByName');
-// Al dar click a las teclas empieza la busqueda 
-searchNames.addEventListener('keyup', function (event) {
-  const inputName = event.target.value; 
-  //comprobación xd
-    console.log(inputName);
-});
-
 
 

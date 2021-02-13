@@ -6,21 +6,21 @@
 // console.log(example());
 
 
-import { everithingData } from './data.js';
+// import { everithingData } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-import {
-  searchCharacters,
-} from './data.js';
+// import {
+//   searchCharacters,
+// } from './data.js';
 
 
 //declarando id  15
 // const insertRickCharacter =document.querySelector('cards');
-const searchResults=document.querySelector('#searchResults');
+// const searchResults=document.querySelector('#searchResults');
 
 // declarando id's del sitio web 19
-const text =document.querySelector('#searchByName'); 
+// const text =document.querySelector('#searchByName'); 
 
 // 169
 // const arrSearchCaracters=searchCharacters(data,text.value);
@@ -49,7 +49,9 @@ function loadAll (){ //función para cargar/mostrar las tarjetas.
  let cards = document.getElementById("cards"); // vincula el elemento con id "cards" que es un article a la variable cards.
  cards.innerHTML=''; // para poder borrar el contenido de cards.
 
- data.results.forEach(function(valor, indice, array){ //forEach sirve para recorrer los elementos de la lista results que está dentro de data. Dentro de forEach debe haber una función con parámetros valor, indice y array.
+ data.results.forEach(function(valor, 
+  // indice, array
+  ){ //forEach sirve para recorrer los elementos de la lista results que está dentro de data. Dentro de forEach debe haber una función con parámetros valor, indice y array.
   
    let card = document.createElement("figure"); //1° crear un elemento en html de tipo figure.
    
@@ -74,7 +76,7 @@ loadAll(); //para llamar/ejecute a la función loadAll
 
 function showModal (item) {
   window.open("#myModal","_self");
-  console.log(item);
+  //console.log(item);
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;

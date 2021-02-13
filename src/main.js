@@ -75,7 +75,24 @@ loadAll(); //para llamar/ejecute a la función loadAll
 function showModal (item) {
   window.open("#myModal","_self");
   console.log(item);
- 
 
+  let characterImage = document.getElementById('photoModal');
+  characterImage.src = item.image;
+  let characterStatus = document.getElementById('statusModal');
+  characterStatus.innerHTML = "Status: " + item.status;
+  let characterSpecies= document.getElementById('speciesModal');
+  characterSpecies.innerHTML = "Specie: " + item.species;
+  let characterType= document.getElementById('typeModal');
+  characterType.innerHTML = "Type: " + item.type;
+  let characterGender= document.getElementById('genderModal');
+  characterGender.innerHTML = "Gender: " + item.gender;
+  let characterOrigin= document.getElementById('originModal');
+  characterOrigin.innerHTML = "Origin: " + item.origin.name;
+  let characterLocation= document.getElementById('locationModal');
+  characterLocation.innerHTML = "Location: " + item.location.name;
+  //let characterEpisode= document.getElementById('episodeModal');
+  //characterEpisode.innerHTML = "Episode: " + item.episode;
+  let characterName = document.getElementById('nameModal');
+  characterName.innerHTML = "Name: " + item.name; // innetHTML se usa para cambiar el valor de un p.
 
 }

@@ -1,9 +1,7 @@
-// estas funciones son de ejemplo
+develop2
 
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
+
+

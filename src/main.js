@@ -10,27 +10,12 @@ import { everithingData } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
 
-import {
-  searchCharacters,
-} from './data.js';
+
+//console.log(everithingData, data);
 
 
-//declarando id  15
-// const insertRickCharacter =document.querySelector('cards');
-const searchResults=document.querySelector('#searchResults');
 
-// declarando id's del sitio web 19
-const text =document.querySelector('#searchByName'); 
-
-// 169
-// const arrSearchCaracters=searchCharacters(data,text.value);
-// if(arrSearchCaracters.length>0){
-//   searchResults.innerHtml=cards(arrSearchCaracters);
-// }
-// else{
-//   searchResults.innerHTML='Nada de nada '
-// }
-
+// import { allCharacters, filterBySpecies, filterByStatus, filterByGender, getSpeciesArray, getStatusArray, getGenderArray, order } from './data.js'
 
 
 function crear_episodios (){
@@ -57,25 +42,14 @@ function loadAll (){ //función para cargar/mostrar las tarjetas.
    let nameCard = document.createElement("figcaption"); //3°crear un elemento en html de tipo figcaption.
  
    let textnode = document.createTextNode(valor.name); //4°crear nodo de texto con el contenido del nombre del personaje.
+
    imageCard.src = valor.image; //5° cambia la propiedad src de elemento de imagen "img".
 
    nameCard.appendChild(textnode);//añade la variable textnode que contiene el texto con el nombre a la variable nameCard.
    card.appendChild(nameCard);//añade la variable nameCard que contiene figcaption a la variable card. 
    card.appendChild(imageCard);//añade la variable imageCard a la variable card.
    cards.appendChild(card);//añade la variable card a la variable cards que contiene todas las otras variables.
-  
-    card.addEventListener('click', () => {
-      showModal(valor);
-
-    });
   });
 }
 loadAll(); //para llamar/ejecute a la función loadAll 
 
-function showModal (item) {
-  window.open("#myModal","_self");
-  console.log(item);
- 
-
-
-}

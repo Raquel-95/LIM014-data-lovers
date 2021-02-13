@@ -23,33 +23,15 @@ import fullData from './data/rickandmorty/rickandmorty.js';
 export const everithingData = fullData;
 
 // estas funciones son de ejemplo
-// export const example = () => {
-//   return 'example';
-// };
+export const example = () => {
+  return 'example';
+};
 
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
+export const anotherExample = () => {
+  return 'OMG';
+};
 
 //BUSCADOR
-//funcion que busca personajes//
-export const searchCharacters=(array,string)=>{
-  const arrOfSearch=[...array];
-  const newArraOfSearch= arrOfSearch.filter((obj)=>obj.name.indexOf(string[0].toUpperCase()+string.slice(1).toLowerCase())>-1);
-  return newArraOfSearch;
-}
-
-//funcion que filtra personajes de a-z//
-export const orderByName=(array,string1)=>{
-  const arrayData = [...array];
-  const newArray = arrayData.map((obj)=>obj.name).sort().map((string2)=> arrayData.find((obj)=>obj.name===string2));
-  if (string1== 'A-Z'){
-    return newArray;
-  }
-
-}
-
-
 
 const searchNames= document.querySelector('#searchByName');
 // Al dar click a las teclas empieza la busqueda 

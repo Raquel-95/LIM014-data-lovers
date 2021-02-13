@@ -13,17 +13,15 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--para que es esto?-->
   </head>
+ 
   <body class="background" >
-
-
     <header>
       <div class="boxName">
         <img class="icon" src="images/rickMortyIcon.png" alt="Icono Rick y Morty">
         <img class="logotipe" src="images/rickMortyLogotipe.png" alt="Logotipo de Rick y Morty"  width="149" height= "467";>
       </div>
     </header>
-
-
+  
     <nav class="barNavegation">
       <ul class="buttonsNavegation"><!-- Flex container -->
         <!-- Attribute Values
@@ -31,11 +29,10 @@
            -->
           <li class="boxBarNavegation line"><a class="barNavegation" href="#">About</a></li><!-- Flex items -->
           <li class="boxBarNavegation line"><a class="barNavegation" href="#">Statistics</a></li><!-- Flex items -->
-          
           <li class="boxBarNavegation"><a class="barNavegation" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch online</a></li><!-- Flex items -->
       </ul>
     </nav>
-
+    
     <nav>
       <section class="nameOrder">
         <section>
@@ -151,7 +148,7 @@
       </select>
     </section>
 
-   <main>
+    <main>
       <article class="cards hide" id="cards">
         <!-- <figure class="card">
             <img src="" alt="">
@@ -159,40 +156,26 @@
           </figure>-->
       </article>
 
-    <a href="#myModal">Abrir Modal</a>
-    <section id = "myModal" class="modal">
-      <section class="modalContent">
-        <a href="#">X</a>
-        <h2>Identification card</h2>
-        <section id="informationModal">
-        <img id="photoModal" src="" alt="">
-          <p class = "paragraphModal" id ="statusModal">Status:</p>
-          <p class = "paragraphModal" id="speciesModal">Species:</p>
-          <p class = "paragraphModal" id="typeModal">Type:</p>
-          <p class = "paragraphModal" id="genderModal">Gender:</p>
-          <p class = "paragraphModal" id="originModal">Origin:</p>
-          <p class = "paragraphModal" id="locationModal">Location:</p>
-          <p class = "paragraphModal" id="episodeModal">Episode:</p>
+      <a href="#myModal">Abrir Modal</a>
+      <section id = "myModal" class="modal">
+        <section class="modalContent">
+          <a href="#">X</a>
+          <h2>Identification card</h2>
+          <section id="informationModal">
+          <img id="photoModal" src="" alt="">
+            <p class = "paragraphModal" id ="statusModal">Status:</p>
+            <p class = "paragraphModal" id="speciesModal">Species:</p>
+            <p class = "paragraphModal" id="typeModal">Type:</p>
+            <p class = "paragraphModal" id="genderModal">Gender:</p>
+            <p class = "paragraphModal" id="originModal">Origin:</p>
+            <p class = "paragraphModal" id="locationModal">Location:</p>
+            <p class = "paragraphModal" id="episodeModal">Episode:</p>
+          </section>
+          <h3 id ="nameModal"></h3>
         </section>
-        <h3 id ="nameModal"></h3>
       </section>
-    </section>
-
-      <article class="hide" id="searchContainer">
-        <div id="searchResults"></div>
-      </article>
-
-      <article class="hide" id="characterAlive">
-        <div id="insertCharacterAlive"></div>
-      </article>
-
-      <article class="hide" id="characterDead">
-        <div id="insertCharacterDead"></div>
-      </article>
-
-
-
-   </main>
+    </main>
+    
     <footer>
        <ul class="socialBars">
         <!-- Attribute Values

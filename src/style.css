@@ -190,3 +190,7 @@ footer span{
   height: 16.94%;
 }
 
+/*                                                                          hide everithing */
+.hide{
+  display: none;
+}

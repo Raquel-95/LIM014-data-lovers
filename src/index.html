@@ -180,24 +180,22 @@
           </li>
           <li class="boxBarNavegation">
             <a class="barNavegation" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch online</a>
-          </li><!-- Flex items -->
+          </li>
       </ul>
-      
     </nav>
-    
+                                                                    <!--search & order section -->    
     <nav>
-      <section class="nameOrder">
-        <section>
-          <input type="search" placeHolder="Search by name" id="searchByName" src= "images/assets/lupa.png" ></input>
+      <section class="nameOrder hide" id="subheaderSection">
+        <section  class="subheaderSection">
+          <input type="search" placeHolder="Search by name" id="searchByName" src= "images/assets/lupa.png" autocomplete="off" ></input>
         </section>
 
-        <select id="order">
+        <select class="subheaderSection" id="order">
           <option hidden selected> Order </option>
-          <option>A - Z</option>
-          <option>Z - A</option>
-          <option>By default</option>
+          <option id="None">A - Z</option>
+          <option id="orderAtoZ">Z - A</option>
+          <option id="orderZtoA">By default</option>
         </select>
-
       </section>
     </nav>
 

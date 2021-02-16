@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'letterRickandMorty'; /*a name to be used later*/
+  src: url('assets/fonts/get_schwifty.ttf'); /*URL to font*/
+}
 
 .background{
   background-color: black;
@@ -64,42 +68,76 @@ img{
 
 /* modal */
 .modalContent{
-background-color:white;
-width:700px;
-padding: 10px 20px;
-margin: 20% auto;
-position: relative;
-}
-.modal{
-background-color: rgba(51,255,0,0.5);
-position:fixed;
-top:0;
-right:0;
-bottom:0;
-left:0;  
-opacity:0;
-pointer-events:none;
-transition: all 1s;
-}
-#myModal:target{
-opacity:1;
-pointer-events:auto;
-}
-
-#informationModal{
-display: flex;
-flex-direction: column;
-}
-
-.paragraphModal{
-display: flex;
-flex-direction: column;
-}
-
-#photoModal{
-height: 250px;
-width: 250px;
-}
+  background-color:white;
+  width:650px;
+  margin: 10% auto;
+  position: relative;
+  border: 9px solid #FFE606;
+  border-radius: 40px;
+  }
+  
+  .modal{
+  background-color: rgba(51,255,0,0.5);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;  
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+  }
+  #myModal:target{
+  opacity:1;
+  pointer-events:auto;
+  }
+  
+  #informationModal{
+  display: flex;
+  }
+  
+  .paragraphModal{
+  display: inline-block;
+  width: 50%;
+  }
+  
+  #photoModal{
+  height: 280px;
+  width: 280px;
+  display: inline-block;
+  margin-bottom: 5%;
+  margin-top: 1%;
+  margin-right: 5%;
+  margin-left: 2%;
+  }
+  
+  #paragraphModal h2 {
+    display: flex;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: 1px solid #2A2C6C;
+    box-shadow: 6px 6px #2A2C6C; 
+  }
+  
+  #nameModal{
+    /*background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);*/
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'letterRickandMorty';
+    color: green;
+    text-shadow: 2px 2px black;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-image: url('images/backgroundModal.png');
+    border: 7px solid #2A2C6C;
+    box-sizing: border-box;
+    border-radius: 0px 0px 28px 28px;
+  }
 
 /* header flex :D******************************* */
 /* header******************************* */
@@ -190,7 +228,8 @@ footer span{
   height: 16.94%;
 }
 
-/*                                                                          hide everithing */
+
+/*hide everithing */
 .hide{
   display: none;
 }

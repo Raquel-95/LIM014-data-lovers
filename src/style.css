@@ -1,0 +1,198 @@
+
+
+.background{
+  background-color: black;
+  background-image: url("images/background.jpg");
+}
+
+#searchByName{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border: 1px solid #C7FA6C;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  margin-right: 10px;
+}
+
+#advancedFilter{
+  background-color: white;
+  display: inline-block;
+}
+
+.nameOrder{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.cards{
+  background-color: black;
+}
+
+.cards{
+  display: flex;
+  flex-wrap:wrap;
+  color: white;
+  
+}
+
+figure{
+  margin: 10px;
+  border: 2px solid greenyellow;
+  border-radius: 25px;
+}
+
+figcaption{
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid greenyellow;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+img{
+  display: flex;
+  justify-content: center;
+  border-radius: 35px;
+  margin-top: 5%;
+}
+
+/* modal */
+.modalContent{
+background-color:white;
+width:700px;
+padding: 10px 20px;
+margin: 20% auto;
+position: relative;
+}
+.modal{
+background-color: rgba(51,255,0,0.5);
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+left:0;  
+opacity:0;
+pointer-events:none;
+transition: all 1s;
+}
+#myModal:target{
+opacity:1;
+pointer-events:auto;
+}
+
+#informationModal{
+display: flex;
+flex-direction: column;
+}
+
+.paragraphModal{
+display: flex;
+flex-direction: column;
+}
+
+#photoModal{
+height: 250px;
+width: 250px;
+}
+
+/* header flex :D******************************* */
+/* header******************************* */
+header .boxName{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 35.30%;
+/* align-self: center; */
+}
+
+header .logotipe{
+/* 467*149 */
+  width: 36.46%;
+  height: 35.30%;
+}
+
+header .icon{
+/* 151*130 */
+  width: 11.79%;
+  height: 30.79%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 2.26% 0% 2.26% 0%;
+}
+/* ******************************* */
+/* nav flex :D******************************* */
+body .navegation{
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  background-color: rgba(37, 34, 34, 0.85);
+  color: white; 
+  width: 100%;
+}
+
+nav ul{
+ 
+
+ display: inline-flex;
+    list-style: none;
+    justify-content: space-around;
+
+ 
+}
+nav li a {
+  text-decoration: none; 
+  font-size:  130%;
+  font-weight: medium;
+  color: white;
+  flex-basis: auto;
+  padding: 0% 1% 0% 1%;
+}
+
+
+/* ******************************* */
+/* nav footer :D******************************* */
+
+footer{
+  /* 1439x124 */
+  /* display: flex;
+  align-content: end; */
+  background: #282323;
+  /* width:100%;
+  bottom:0; */
+}
+
+
+footer .socialBar{
+ display: flex;
+}
+
+footer .allRightsReserved{
+display: flex;
+flex-direction: row;
+
+}
+footer img{
+  width: 4.45%;
+  height: 35.48%;
+}
+
+footer span{
+ width: 11.74%;
+  height: 16.94%;
+}
+
+/*                                                                          hide everithing */
+.hide{
+  display: none;
+}
+

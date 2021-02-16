@@ -1,12 +1,231 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
   <head>
     <meta charset="utf-8">
+     <!-- content="width=device-width el ancho de la pagina web es igual al ancho de la pantalla -->
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon"  href="images/portalIcon.jpg">
     <title>Data Lovers</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--sitio web de donde salen los iconos de redes sociales-->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+
+ 
+  <body class="background" >
+
+                                                                         <!-- start Home  -->
+    <section id="homeSection">
+      <div class="home">
+         <img src="images/spaceHome.jpg" alt="backgroundPrincipal">
+         <button id="btnFirst" class="btnFirst">Start</button>
+      </div>
+    </section>
+
+                                                                               <!--header section -->
+    <header class="hide" id="logoHeader">
+      <div class="boxName" id="boxName" >
+        <img class="icon" src="images/rickMortyIcon.png" alt="Icono Rick y Morty">
+        <img class="logotipe" src="images/rickMortyLogotipe.png" alt="Logotipo de Rick y Morty"  width="149" height= "467";>
+      </div>
+    </header>
+
+                                                                        <!--principal nav section -->
+    
+
+    <nav class="hide barNavegation" id="nav">
+
+      <section id="advancedFilter">
+        <p><b>Filter:</b></p>
+        <p>Status</p>
+        <select id = "estado_vida">
+          <option>--Select--</option>
+          <option>Alive</option>
+          <option>Dead</option>
+        </select> </br>
+        <p>Species</p>
+        <select id = "species">
+          <option>--Select--</option>
+          <option>Human</option>
+          <option>Alien</option>
+          <option>Animal</option>
+          <option>Vampire</option>
+          <option>Robot</option>
+        </select> </br>
+        <p>Gender</p>
+          <select id = "gender">
+          <option>--Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Unknown</option>
+          <option>Genderless</option>
+        </select></br>
+        <p>Origin</p>
+        </select>
+          <select id = "origin">
+          <option>--Selecionar--</option>
+          <option>Earth (Replacement Dimension)</option>
+          <option>Abadango</option>
+          <option>Earth (C-137)</option>
+          <option>Signus 5 Expanse</option>
+          <option>Post-Apocalyptic Earth</option>
+          <option>Purge Planet</option>
+          <option>Venzenulon 7</option>
+          <option>Bepis 9</option>
+          <option>Earth (C-500A)</option>
+          <option>Earth (Evil Rick's Target Dimension)</option>
+          <option>Nuptia 4</option>
+          <option>Fantasy World</option>
+          <option>Bird World</option>
+          <option>Rick's Battery Microverse</option>
+          <option>The Menagerie</option>
+          <option>Earth (K-83)</option>
+          <option>Hideout Planet</option>
+          <option>Cronenberg Earth</option>
+          <option>Giant's Town</option>
+          <option>Unity's Planet</option>
+          <option>Anatomy Park</option>
+          <option>Gromflom Prime</option>
+          <option>Earth (J19ζ7)</option>
+          <option>Roy: A Life Well Lived</option>
+          <option>Eric Stoltz Mask Eart</option>
+          <option>Glaagablaaga</option>
+          <option>Gazorpazorp</option>
+          <option>Resort Plane</option>
+          <option>Hamster in Butt World</option>
+          <option>Earth (Giant Telepathic Spiders Dimension</option>
+          <option>Alphabetrium</option>
+          <option>Earth (5-126</option>
+          <option>Krootabulon</option>
+          <option>Pluto</option>
+          <option>Zeep Xanflorp's Miniverse</option>
+          <option>Larva Alien's Planet</option>
+          <option>Mr. Goldenfold's dream</option>
+          <option>Earth (K-22)</option>
+          <option>Mr. Meeseeks Box</option>
+          <option>Mega Gargantuan Kingdom</option>
+          <option>Gear World</option>
+          <option>Earth (D-99)</option>
+          <option>Earth (D716)</option>
+          <option>Earth (D716-B)</option>
+          <option>Earth (D716-C)</option>
+          <option>Earth (J-22)</option>
+          <option>Planet Squanch</option>
+          <option>Detoxifier</option>
+          <option>Kyle's Teenyverse</option>
+          <option>Trunk World</option>
+          <option>Plopstar</option>
+          <option>Girvonesk</option>
+          <option>Snuffles' Dream</option>
+          <option>Interdimensional Cable</option>
+          <option>Earth (Phone Dimension)</option>
+          <option>Earth (Pizza Dimension)</option>
+          <option>Greasy Grandma World</option>
+          <option>Earth (Chair Dimension)</option>
+          <option>Testicle Monster Dimension</option>
+          <option>Árboles Mentirosos</option>
+          <option>Citadel of Ricks</option>
+          <option>Unknown</option>
+        </select></br>
+        <p>Episode</p>
+  
+        <select id="episodes">
+          <option>--Select--</option>
+          
+        </select>
+      </section>
+
+
+      <ul class="buttonsNavegation">
+        <!-- Attribute Values
+          _blank	Opens the linked document in a new window or tab
+           -->
+          <li class="boxBarNavegation line">
+            <a class="barNavegation" href="#">About</a>
+          </li>
+          <li class="boxBarNavegation line">
+            <a class="barNavegation" href="#">Statistics</a>
+          </li>
+          <li class="boxBarNavegation">
+            <a class="barNavegation" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch online</a>
+          </li>
+      </ul>
+    </nav>
+                                                                    <!--search & order section -->    
+    <nav>
+      <section class="nameOrder hide" id="subheaderSection">
+        <section  class="subheaderSection">
+          <input type="search" placeHolder="Search by name" id="searchByName" src= "images/assets/lupa.png" autocomplete="off" ></input>
+        </section>
+
+        <select class="subheaderSection" id="order">
+          <option hidden selected> Order </option>
+          <option id="None">A - Z</option>
+          <option id="orderAtoZ">Z - A</option>
+          <option id="orderZtoA">By default</option>
+        </select>
+      </section>
+    </nav>
+
+                                                                 <!--Finally, Main character section -->   
+    <section id="charactersSection" class="hide">
+      <main class="mainContainer" >
+        <!-- Cards :D -->
+        <article class="cards listCharacters " id="cards">
+          <!-- <figure class="card">
+              <img src="" alt="">
+              <figcaption>Rick</figcaption>
+            </figure>-->
+        </article>
+       <!-- Pagination -->
+       <div id="buttonsContainer" class="buttonsContainer active"></div>
+       <!-- character description  -->
+        <a href="#myModal">Abrir Modal</a>
+        <section id = "myModal" class="modal">
+          <section class="modalContent">
+            <a href="#">X</a>
+            <h2>Identification card</h2>
+            <section id="informationModal">
+            <img id="photoModal" src="" alt="">
+              <p class = "paragraphModal" id ="statusModal">Status:</p>
+              <p class = "paragraphModal" id="speciesModal">Species:</p>
+              <p class = "paragraphModal" id="typeModal">Type:</p>
+              <p class = "paragraphModal" id="genderModal">Gender:</p>
+              <p class = "paragraphModal" id="originModal">Origin:</p>
+              <p class = "paragraphModal" id="locationModal">Location:</p>
+              <p class = "paragraphModal" id="episodeModal">Episode:</p>
+            </section>
+            <h3 id ="nameModal"></h3>
+          </section>
+        </section>
+      </main>
+    </section>
+                                                              <!--oothers about and stat -->
+    <section id="aboutSection" class="hide"></section>   
+    
+    <section id="statisticsSection" class="hide"></section>
+
+                                                                     <!--footer section -->
+    <footer class="hide" id="footerSection">
+       <ul class="socialBars">
+        <!-- Attribute Values
+          _blank	Opens the linked document in a new window or tab
+           -->
+          <li class=""><a href="https://www.facebook.com/RickandMorty/"  target="_blank" class="fa fa-facebook" ></a></li>
+          <li class=""><a href="https://twitter.com/rickandmorty"  target="_blank" class="fa fa-twitter-square" href="#"></a></li>
+          <li class=""><a href="https://www.instagram.com/rickandmorty/?hl=es" target="_blank" class="fa fa-instagram"  ></a></li>
+      </ul>
+      <div class="allRightsReserved">
+        <img src="images/rickFooter.png" alt="Icono de Footer">
+        <span >Derechos Reservados</span>
+      </div>
+    </footer>
+    <script 
+    src="main.js" type="module" 
+    document.addEventListener("DOMContentLoaded", drawResults);
+    
+    ></script>
   </body>
 </html>

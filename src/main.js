@@ -1,4 +1,5 @@
-import {allCharacters} from './data.js'
+// import {order} from './data.js'
+import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 const getListAllCharacters = () => {
   drawResults(allCharacters);

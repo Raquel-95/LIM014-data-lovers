@@ -1,9 +1,11 @@
-import {allCharacters} from './data.js'
+import {order} from './data.js'
+import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 const getListAllCharacters = () => {
   drawResults(allCharacters);
 }
   
+// Array and pagination
 function drawResults(arrayOfCharacters){
   drawCharactersPage(0,arrayOfCharacters);
   const buttonsContainer=document.getElementById("buttonsContainer");
@@ -27,6 +29,8 @@ function drawResults(arrayOfCharacters){
       }
 
 }
+
+// print cards
 
 function drawCharactersPage (index,arrayOfCharacters) {
   //muestra 20 personajes por página
@@ -73,14 +77,7 @@ document.querySelector('#btnFirst').addEventListener('click',getListAllCharacter
 
 
 
-
-
-
-
-
-
-
-
+// crear option de selec
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
   for (let i = 1; i<=31; i++) {
@@ -147,6 +144,26 @@ createEpisodes();
 
 }
 
+// order a-z z-a
+// const getListAtoZ = () => {
+//   let sortedAscending = [];
+//   sortedAscending = order.ascending (allCharacters);
+//   drawResults(sortedAscending);
+// }
+// document.querySelector('#orderAtoZ').addEventListener('click',getListAtoZ);
+
+// const getListZtoA = () => {
+//   let sortedDescending = [];
+//   sortedDescending = order.descending(allCharacters);
+//   drawResults(sortedDescending);
+// }
+// document.querySelector('#orderZtoA').addEventListener('click', getListZtoA);
+const filterSelection=document.querySelector('#order');
+
+filterSelection.addEventListener('change', () => {
+  const arrByName = order(allCharacters, filterSelection.value);
+  insertRCharacter.innerHTML = drawCharactersPage(arrByName);
+});
 
 
 

@@ -35,9 +35,7 @@ function loadAll (){ //función para cargar/mostrar las tarjetas.
   let cards = document.getElementById("cards"); // vincula el elemento con id "cards" que es un article a la variable cards.
   cards.innerHTML=''; // para poder borrar el contenido de cards.
  
-  data.results.forEach(function(valor, 
-   // indice, array
-   ){ //forEach sirve para recorrer los elementos de la lista results que está dentro de data. Dentro de forEach debe haber una función con parámetros valor, indice y array.
+  data.results.forEach(function(valor, indice, array){ //forEach sirve para recorrer los elementos de la lista results que está dentro de data. Dentro de forEach debe haber una función con parámetros valor, indice y array.
    
     let card = document.createElement("figure"); //1° crear un elemento en html de tipo figure.
     
@@ -67,20 +65,20 @@ function loadAll (){ //función para cargar/mostrar las tarjetas.
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;
   let characterStatus = document.getElementById('statusModal');
-  characterStatus.innerHTML = "Status: " + item.status;
+  characterStatus.innerHTML = "<b>Status: </b>" + item.status;
   let characterSpecies= document.getElementById('speciesModal');
-  characterSpecies.innerHTML = "Specie: " + item.species;
+  characterSpecies.innerHTML = "<b>Specie: </b>" + item.species;
   let characterType= document.getElementById('typeModal');
-  characterType.innerHTML = "Type: " + item.type;
+  characterType.innerHTML = "<b>Type: </b>" + item.type;
   let characterGender= document.getElementById('genderModal');
-  characterGender.innerHTML = "Gender: " + item.gender;
+  characterGender.innerHTML = "<b>Gender: </b>" + item.gender;
   let characterOrigin= document.getElementById('originModal');
-  characterOrigin.innerHTML = "Origin: " + item.origin.name;
+  characterOrigin.innerHTML = "<b>Origin: </b>" + item.origin.name;
   let characterLocation= document.getElementById('locationModal');
-  characterLocation.innerHTML = "Location: " + item.location.name;
+  characterLocation.innerHTML = "<b>Location: </b>" + item.location.name;
   //let characterEpisode= document.getElementById('episodeModal');
-  //characterEpisode.innerHTML = "Episode: " + item.episode;
+  //characterEpisode.innerHTML = "<b>Episode: </b>" + item.episode;
   let characterName = document.getElementById('nameModal');
-  characterName.innerHTML = "Name: " + item.name; // innetHTML se usa para cambiar el valor de un p.
+  characterName.innerHTML = item.name; // innetHTML se usa para cambiar el valor de un p.
 
 }

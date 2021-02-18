@@ -131,14 +131,25 @@ createEpisodes();
   characterOrigin.innerHTML = "<b>Origin: </b>" + item.origin.name;
   let characterLocation= document.getElementById('locationModal');
   characterLocation.innerHTML = "<b>Location: </b>" + item.location.name;
-  //let characterEpisode= document.getElementById('episodeModal');
-  //characterEpisode.innerHTML = "<b>Episode: </b>" + item.episode;
   let characterName = document.getElementById('nameModal');
   characterName.innerHTML = item.name; // innetHTML se usa para cambiar el valor de un p.
 
+  let episodes = "";
+  item.episode.forEach(element => {
+    episodes += element.slice(40, element.length) + ", ";
+  });
+  episodes = episodes.slice(0, episodes.length-2) + ".";
+
+  let characterEpisode= document.getElementById('episodeModal');
+  characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
+
 }
 
-
+const close = document.getElementById("xClose");
+close.addEventListener('click', () => {
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "hidden";
+})
 
 
 

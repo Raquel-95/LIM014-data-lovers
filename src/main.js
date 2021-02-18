@@ -124,7 +124,7 @@ createEpisodes();
 
  function showModal (item) {
   window.open("#myModal","_self");
-  console.log(item);
+  //console.log(item);
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;

@@ -42,13 +42,19 @@
   
 }
 
-figure{
+div{
   margin: 10px;
   border: 2px solid greenyellow;
   border-radius: 25px;
 }
 
-figcaption{
+p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h3List{
   display: flex;
   justify-content: center;
   border-bottom: 2px solid greenyellow;
@@ -59,7 +65,7 @@ figcaption{
   padding-bottom: 5%;
 }
 
-img{
+.imageList{
   display: flex;
   justify-content: center;
   border-radius: 35px;
@@ -138,6 +144,24 @@ img{
     box-sizing: border-box;
     border-radius: 0px 0px 28px 28px;
   }
+
+.close{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display:flex;
+  width: 35px;
+  height: 35px;
+  background: red;
+  color: white;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
 
 /* header flex :D******************************* */
 /* header******************************* */

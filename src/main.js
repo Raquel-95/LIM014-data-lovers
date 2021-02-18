@@ -1,4 +1,4 @@
-import {allCharacters} from './data.js'
+import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 const getListAllCharacters = () => {
   drawResults(allCharacters);
@@ -49,13 +49,13 @@ function drawCharactersPage (index,arrayOfCharacters) {
     // The command substitution can be done in two ways one is using $(…) and the other is `…`. Both work same, but the $(…) form is the modern way and has more clarity and readability.
     
     elementDiv.innerHTML =`
-      
       <h3 class="h3List" >${result.name}</h3>
-      <img class="imageList" src="${result.image}" alt="${result.name}">
-      <section>
-      <p style="color: rgba(43, 198, 17, 1)" > Status: <span style="color: rgba(255, 255, 255, 1)" > ${result.status} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Especie: <span style="color: rgba(255, 255, 255, 1)"> ${result.species} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Gender: <span style="color: rgba(255, 255, 255, 1)"> ${result.gender} </span></p>
+      <img class="imageList" src="${result.image}" alt="${result.name}"/>
+      <section class="dataCard">
+        <p> Status: <span> ${result.status} </span></p>
+        <p> Especie: <span> ${result.species} </span></p>
+        <p> Gender: <span> ${result.gender} </span></p>
+      </section>
       `
       elementOrderedList.appendChild(elementDiv);
 

@@ -48,10 +48,15 @@ div{
   border-radius: 25px;
 }
 
-p{
+.dataCard p{
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(43, 198, 17, 1);
+}
+
+.dataCard span{
+  color: rgba(255, 255, 255, 1);
 }
 
 .h3List{
@@ -133,7 +138,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'letterRickandMorty';
     color: green;
     text-shadow: 2px 2px black;

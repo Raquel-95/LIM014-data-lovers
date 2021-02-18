@@ -70,17 +70,6 @@ function drawCharactersPage (index,arrayOfCharacters) {
 // *********************************************************************click and show characteres***********
 document.querySelector('#btnFirst').addEventListener('click',getListAllCharacters);
 
-
-
-
-
-
-
-
-
-
-
-
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
   for (let i = 1; i<=31; i++) {

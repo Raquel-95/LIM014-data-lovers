@@ -123,8 +123,10 @@ createEpisodes();
 //  loadAll(); //para llamar/ejecute a la función loadAll 
 
  function showModal (item) {
-  window.open("#myModal","_self");
+  //window.open("#myModal","_self");
   //console.log(item);
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "visible" ;
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;

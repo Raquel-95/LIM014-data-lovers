@@ -93,11 +93,12 @@ div{
   top:0;
   right:0;
   bottom:0;
-  left:0;  
-  opacity:0;
-  pointer-events:none;
-  transition: all 1s;
+  left:0; 
+  opacity:1;
+  visibility: hidden;
+  pointer-events: auto;
   }
+
   #myModal:target{
   opacity:1;
   pointer-events:auto;
@@ -117,9 +118,10 @@ div{
   width: 280px;
   display: inline-block;
   margin-bottom: 5%;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-right: 5%;
   margin-left: 2%;
+  border-radius: 15%;
   }
   
   #paragraphModal h2 {
@@ -152,7 +154,7 @@ div{
 
 .close{
   position: absolute;
-  top: 5px;
+  top: px;
   left: 5px;
   display:flex;
   width: 35px;

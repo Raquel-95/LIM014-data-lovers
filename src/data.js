@@ -6,30 +6,30 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       if (a.name > b.name) {
         return 1;
       }
-      if (a.name < b.name) {
+      else if (a.name < b.name) {
         return -1;
       }
       return 0;
     })
   }
-  if (sortBy === "name" && sortOrder === "orderZtoA"){
+  else if (sortBy === "name" && sortOrder === "orderZtoA"){
    return allCharacters.sort((a, b)=> {
       if (a.name < b.name) {
         return 1;
       }
-      if (a.name > b.name) {
+      else if (a.name > b.name) {
         return -1;
       }
       return 0;
     })
   }
 
-  if(sortBy === "name" && sortOrder === "none"){
+  else if (sortBy === "name" && sortOrder === "none"){
     return allCharacters.sort((a, b)=> {
       if (a.id> b.id) {
         return 1;
       }
-      if (a.id < b.id) {
+      else if (a.id < b.id) {
         return -1;
       }
       return 0;

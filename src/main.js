@@ -14,35 +14,6 @@ const orderAll = allCharacters.sort((a,b) => {
 })
 console.log(orderAll.reverse()) */
 
-
-//Función para ordenar A-Z/ Z-A
-const orderAll = document.querySelector("#order");
-
-
-// let orderAll = allCharacters.sort((a,b) => {
-//   if (a.name > b.name ) {
-//     return 1;
-//   }
-//   if (a.name < b.name ) {
-//     return -1;
-//   }
-//   return 0;
-// })
-// document.querySelector('#orderAtoZ').addEventListener('change', orderAll);
-
-
-// let orderAllReverse = allCharacters.sort((a,b) => {
-//   if (a.name < b.name ) {
-//     return 1;
-//   }
-//   if (a.name > b.name ) {
-//     return -1;
-//   }
-//   return 0;
-// })
-// document.querySelector('#orderAtoZ').addEventListener('change', orderAllReverse);
-
-
 // ****************************************************
 
 const getListAllCharacters = () => {
@@ -116,16 +87,6 @@ function drawCharactersPage (index,arrayOfCharacters) {
 // *********************************************************************click and show characteres***********
 document.querySelector('#btnFirst').addEventListener('click',getListAllCharacters);
 
-
-
-
-
-
-
-
-
-
-
 // ***************************************************episodios del 1-31
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
@@ -137,37 +98,7 @@ function createEpisodes (){
   }
 }
 createEpisodes();
-
-
-
-// function loadAll (){ //función para cargar/mostrar las tarjetas.
-//   let cards = document.getElementById("cards"); // vincula el elemento con id "cards" que es un article a la variable cards.
-//   cards.innerHTML=''; // para poder borrar el contenido de cards.
- 
-//   data.results.forEach(function(valor,indice,data){ //forEach sirve para recorrer los elementos de la lista results que está dentro de data. Dentro de forEach debe haber una función con parámetros valor, indice y array.
-//    console.log(valor);
-
-//     let card = document.createElement("figure"); //1° crear un elemento en html de tipo figure.
-    
-//     let imageCard = document.createElement("img");//2° crear un elemento en html de tipo img.
-//     let nameCard = document.createElement("figcaption"); //3°crear un elemento en html de tipo figcaption.
-  
-//     let textnode = document.createTextNode(valor.name); //4°crear nodo de texto con el contenido del nombre del personaje.
-//     imageCard.src = valor.image; //5° cambia la propiedad src de elemento de imagen "img".
- 
-//     nameCard.appendChild(textnode);//añade la variable textnode que contiene el texto con el nombre a la variable nameCard.
-//     card.appendChild(nameCard);//añade la variable nameCard que contiene figcaption a la variable card. 
-//     card.appendChild(imageCard);//añade la variable imageCard a la variable card.
-//     cards.appendChild(card);//añade la variable card a la variable cards que contiene todas las otras variables.
-   
-//      card.addEventListener('click', () => {
-//        showModal(valor);
- 
-//      });
-//    });
-//  }
-//  loadAll(); //para llamar/ejecute a la función loadAll 
-
+// ******************************************************
  function showModal (item) {
   window.open("#myModal","_self");
   // console.log(item);
@@ -209,17 +140,7 @@ searchBar.addEventListener('keyup',(e) => {
  drawResults(filteredCharacters)
 });
 
-// ***********************************************************orde a-z
 
-
-// const orderAlphabetic = document.getElementById('order');
-
-// orderAlphabetic.addEventListener("change", (e) => {
-//   const arrayOrder = order( e.target.name, getListAllCharacters);
-//   elementOrderedList.textContent = "orderAtoZ";
-//   bodyFilter.innerHTML = "";
-//   drawResults(arrayOrder);
-// });
 
 // ***********************************************************click start home**************1
 document.querySelector('#btnFirst').addEventListener('click', getEnter );
@@ -275,6 +196,10 @@ function previousMain(){
   let displayFooter=document.getElementById("footerSection");
   displayFooter.classList.add("hide");
 }
+
+
+// ***********************************************************orde a-z 
+const orderAll = document.querySelector("#order");
 
 
 orderAll.addEventListener( "change" , (event) => {

@@ -1,8 +1,53 @@
-// import {order} from './data.js'
+import {dataSort} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
+
+// Ordenando la data alfabeticamnete
+/*
+const orderAll = allCharacters.sort((a,b) => {
+  if (a.name > b.name ) {
+    return 1;
+  }
+  if (a.name < b.name ) {
+    return -1;
+  }
+  return 0;
+})
+console.log(orderAll.reverse()) */
+
+
+//Función para ordenar A-Z/ Z-A
+const orderAll = document.querySelector("#order");
+
+
+// let orderAll = allCharacters.sort((a,b) => {
+//   if (a.name > b.name ) {
+//     return 1;
+//   }
+//   if (a.name < b.name ) {
+//     return -1;
+//   }
+//   return 0;
+// })
+// document.querySelector('#orderAtoZ').addEventListener('change', orderAll);
+
+
+// let orderAllReverse = allCharacters.sort((a,b) => {
+//   if (a.name < b.name ) {
+//     return 1;
+//   }
+//   if (a.name > b.name ) {
+//     return -1;
+//   }
+//   return 0;
+// })
+// document.querySelector('#orderAtoZ').addEventListener('change', orderAllReverse);
+
+
+// ****************************************************
 
 const getListAllCharacters = () => {
   drawResults(allCharacters);
+ 
 }
   
 function drawResults(arrayOfCharacters){
@@ -81,7 +126,7 @@ document.querySelector('#btnFirst').addEventListener('click',getListAllCharacter
 
 
 
-
+// ***************************************************episodios del 1-31
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
   for (let i = 1; i<=31; i++) {
@@ -125,7 +170,7 @@ createEpisodes();
 
  function showModal (item) {
   window.open("#myModal","_self");
-  console.log(item);
+  // console.log(item);
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;
@@ -164,6 +209,17 @@ searchBar.addEventListener('keyup',(e) => {
  drawResults(filteredCharacters)
 });
 
+// ***********************************************************orde a-z
+
+
+// const orderAlphabetic = document.getElementById('order');
+
+// orderAlphabetic.addEventListener("change", (e) => {
+//   const arrayOrder = order( e.target.name, getListAllCharacters);
+//   elementOrderedList.textContent = "orderAtoZ";
+//   bodyFilter.innerHTML = "";
+//   drawResults(arrayOrder);
+// });
 
 // ***********************************************************click start home**************1
 document.querySelector('#btnFirst').addEventListener('click', getEnter );
@@ -219,3 +275,26 @@ function previousMain(){
   let displayFooter=document.getElementById("footerSection");
   displayFooter.classList.add("hide");
 }
+
+
+orderAll.addEventListener( "change" , (event) => {
+  console.log(event.target.value);
+    document.getElementById("cards").innerHTML="";
+    const ordenar = Object.keys(allCharacters).map(key => {
+     
+      return allCharacters[key];
+    })
+   
+    let sortData =dataSort(ordenar,"name",event.target.value);
+   
+  
+    
+          // const ordenO = Object.entries(sortData);
+     const ordenO = sortData;
+     console.log(sortData);   
+               
+     return drawResults(ordenO);  
+  
+    
+  });
+  console.log(allCharacters)

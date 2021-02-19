@@ -161,10 +161,10 @@
         </section>
 
         <select class="subheaderSection" id="order">
-          <option hidden selected> Order </option>
-          <option id="None">A - Z</option>
-          <option id="orderAtoZ">Z - A</option>
-          <option id="orderZtoA">By default</option>
+          <option value="" hidden selected> Order </option>
+          <option value="orderAtoZ" id="orderAtoZ">A - Z</option>
+          <option value="orderZtoA" id="orderZtoA">Z - A</option>
+          <option value="none" id="none">By default</option>
         </select>
       </section>
     </nav>
@@ -173,7 +173,7 @@
     
                                                                  <!--Finally, Main character section -->   
     <section id="charactersSection" class="hide">
-      <main class="mainContainer" >
+      <main class="mainContainer" id="mainContainer">
         <!-- Cards :D -->
         <article class="cards listCharacters " id="cards">
           <!-- <figure class="card">

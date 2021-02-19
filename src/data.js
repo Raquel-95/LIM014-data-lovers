@@ -1,3 +1,4 @@
+
 // Filtrado por orden A-Z/ Z-A
 export const dataSort = (allCharacters, sortBy, sortOrder) => {
   console.log("entre dibidubsdip");

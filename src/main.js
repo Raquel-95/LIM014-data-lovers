@@ -1,3 +1,4 @@
+
 import {dataSort} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
@@ -16,11 +17,13 @@ console.log(orderAll.reverse()) */
 
 // ****************************************************
 
+
 const getListAllCharacters = () => {
   drawResults(allCharacters);
  
 }
   
+// Array and pagination
 function drawResults(arrayOfCharacters){
   drawCharactersPage(0,arrayOfCharacters);
   const buttonsContainer=document.getElementById("buttonsContainer");
@@ -45,6 +48,8 @@ function drawResults(arrayOfCharacters){
 
 }
 
+// print cards
+
 function drawCharactersPage (index,arrayOfCharacters) {
   //muestra 20 personajes por página
   
@@ -66,13 +71,13 @@ function drawCharactersPage (index,arrayOfCharacters) {
     // The command substitution can be done in two ways one is using $(…) and the other is `…`. Both work same, but the $(…) form is the modern way and has more clarity and readability.
     
     elementDiv.innerHTML =`
-      
       <h3 class="h3List" >${result.name}</h3>
-      <img class="imageList" src="${result.image}" alt="${result.name}">
-      <section>
-      <p style="color: rgba(43, 198, 17, 1)" > Status: <span style="color: rgba(255, 255, 255, 1)" > ${result.status} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Especie: <span style="color: rgba(255, 255, 255, 1)"> ${result.species} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Gender: <span style="color: rgba(255, 255, 255, 1)"> ${result.gender} </span></p>
+      <img class="imageList" src="${result.image}" alt="${result.name}"/>
+      <section class="dataCard">
+        <p> Status: <span> ${result.status} </span></p>
+        <p> Especie: <span> ${result.species} </span></p>
+        <p> Gender: <span> ${result.gender} </span></p>
+      </section>
       `
       elementOrderedList.appendChild(elementDiv);
 
@@ -88,6 +93,9 @@ function drawCharactersPage (index,arrayOfCharacters) {
 document.querySelector('#btnFirst').addEventListener('click',getListAllCharacters);
 
 // ***************************************************episodios del 1-31
+
+// crear option de selec
+
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
   for (let i = 1; i<=31; i++) {
@@ -100,8 +108,10 @@ function createEpisodes (){
 createEpisodes();
 // ******************************************************
  function showModal (item) {
-  window.open("#myModal","_self");
-  // console.log(item);
+  //window.open("#myModal","_self");
+  //console.log(item);
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "visible" ;
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;
@@ -117,14 +127,29 @@ createEpisodes();
   characterOrigin.innerHTML = "<b>Origin: </b>" + item.origin.name;
   let characterLocation= document.getElementById('locationModal');
   characterLocation.innerHTML = "<b>Location: </b>" + item.location.name;
-  //let characterEpisode= document.getElementById('episodeModal');
-  //characterEpisode.innerHTML = "<b>Episode: </b>" + item.episode;
   let characterName = document.getElementById('nameModal');
   characterName.innerHTML = item.name; // innetHTML se usa para cambiar el valor de un p.
+
+  let episodes = "";
+  item.episode.forEach(element => {
+    episodes += element.slice(40, element.length) + ", ";
+  });
+  episodes = episodes.slice(0, episodes.length-2) + ".";
+
+  let characterEpisode= document.getElementById('episodeModal');
+  characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
+
 
 }
 
 
+
+
+const close = document.getElementById("xClose");
+close.addEventListener('click', () => {
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "hidden";
+})
 
 
 

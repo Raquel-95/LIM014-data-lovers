@@ -1,9 +1,11 @@
+
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 const getListAllCharacters = () => {
   drawResults(allCharacters);
 }
   
+// Array and pagination
 function drawResults(arrayOfCharacters){
   drawCharactersPage(0,arrayOfCharacters);
   const buttonsContainer=document.getElementById("buttonsContainer");
@@ -27,6 +29,8 @@ function drawResults(arrayOfCharacters){
       }
 
 }
+
+// print cards
 
 function drawCharactersPage (index,arrayOfCharacters) {
   //muestra 20 personajes por página
@@ -69,6 +73,9 @@ function drawCharactersPage (index,arrayOfCharacters) {
 }
 // *********************************************************************click and show characteres***********
 document.querySelector('#btnFirst').addEventListener('click',getListAllCharacters);
+
+
+// crear option de selec
 
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
@@ -143,7 +150,11 @@ createEpisodes();
   let characterEpisode= document.getElementById('episodeModal');
   characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
 
+
 }
+
+
+
 
 const close = document.getElementById("xClose");
 close.addEventListener('click', () => {

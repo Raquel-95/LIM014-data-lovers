@@ -3,6 +3,7 @@
   src: url('assets/fonts/get_schwifty.ttf'); /*URL to font*/
 }
 
+
 .background{
   background-color: black;
   background-image: url("images/background.jpg");
@@ -264,3 +265,4 @@ footer span{
 .hide{
   display: none;
 }
+

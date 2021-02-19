@@ -43,13 +43,24 @@
   
 }
 
-figure{
+div{
   margin: 10px;
   border: 2px solid greenyellow;
   border-radius: 25px;
 }
 
-figcaption{
+.dataCard p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(43, 198, 17, 1);
+}
+
+.dataCard span{
+  color: rgba(255, 255, 255, 1);
+}
+
+.h3List{
   display: flex;
   justify-content: center;
   border-bottom: 2px solid greenyellow;
@@ -60,7 +71,7 @@ figcaption{
   padding-bottom: 5%;
 }
 
-img{
+.imageList{
   display: flex;
   justify-content: center;
   border-radius: 35px;
@@ -83,11 +94,12 @@ img{
   top:0;
   right:0;
   bottom:0;
-  left:0;  
-  opacity:0;
-  pointer-events:none;
-  transition: all 1s;
+  left:0; 
+  opacity:1;
+  visibility: hidden;
+  pointer-events: auto;
   }
+
   #myModal:target{
   opacity:1;
   pointer-events:auto;
@@ -107,9 +119,10 @@ img{
   width: 280px;
   display: inline-block;
   margin-bottom: 5%;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-right: 5%;
   margin-left: 2%;
+  border-radius: 15%;
   }
   
   #paragraphModal h2 {
@@ -128,7 +141,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'letterRickandMorty';
     color: green;
     text-shadow: 2px 2px black;
@@ -139,6 +152,24 @@ img{
     box-sizing: border-box;
     border-radius: 0px 0px 28px 28px;
   }
+
+.close{
+  position: absolute;
+  top: px;
+  left: 5px;
+  display:flex;
+  width: 35px;
+  height: 35px;
+  background: red;
+  color: white;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
 
 /* header flex :D******************************* */
 /* header******************************* */

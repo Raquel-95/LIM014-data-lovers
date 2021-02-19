@@ -1,4 +1,4 @@
-import {order} from './data.js'
+
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 const getListAllCharacters = () => {
@@ -53,13 +53,13 @@ function drawCharactersPage (index,arrayOfCharacters) {
     // The command substitution can be done in two ways one is using $(…) and the other is `…`. Both work same, but the $(…) form is the modern way and has more clarity and readability.
     
     elementDiv.innerHTML =`
-      
       <h3 class="h3List" >${result.name}</h3>
-      <img class="imageList" src="${result.image}" alt="${result.name}">
-      <section>
-      <p style="color: rgba(43, 198, 17, 1)" > Status: <span style="color: rgba(255, 255, 255, 1)" > ${result.status} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Especie: <span style="color: rgba(255, 255, 255, 1)"> ${result.species} </span></p>
-      <p style="color: rgba(43, 198, 17, 1)" > Gender: <span style="color: rgba(255, 255, 255, 1)"> ${result.gender} </span></p>
+      <img class="imageList" src="${result.image}" alt="${result.name}"/>
+      <section class="dataCard">
+        <p> Status: <span> ${result.status} </span></p>
+        <p> Especie: <span> ${result.species} </span></p>
+        <p> Gender: <span> ${result.gender} </span></p>
+      </section>
       `
       elementOrderedList.appendChild(elementDiv);
 
@@ -75,9 +75,8 @@ function drawCharactersPage (index,arrayOfCharacters) {
 document.querySelector('#btnFirst').addEventListener('click',getListAllCharacters);
 
 
-
-
 // crear option de selec
+
 function createEpisodes (){
   let episodios = document.getElementById("episodes");
   for (let i = 1; i<=31; i++) {
@@ -120,8 +119,10 @@ createEpisodes();
 //  loadAll(); //para llamar/ejecute a la función loadAll 
 
  function showModal (item) {
-  window.open("#myModal","_self");
-  console.log(item);
+  //window.open("#myModal","_self");
+  //console.log(item);
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "visible" ;
 
   let characterImage = document.getElementById('photoModal');
   characterImage.src = item.image;
@@ -137,34 +138,29 @@ createEpisodes();
   characterOrigin.innerHTML = "<b>Origin: </b>" + item.origin.name;
   let characterLocation= document.getElementById('locationModal');
   characterLocation.innerHTML = "<b>Location: </b>" + item.location.name;
-  //let characterEpisode= document.getElementById('episodeModal');
-  //characterEpisode.innerHTML = "<b>Episode: </b>" + item.episode;
   let characterName = document.getElementById('nameModal');
   characterName.innerHTML = item.name; // innetHTML se usa para cambiar el valor de un p.
 
+  let episodes = "";
+  item.episode.forEach(element => {
+    episodes += element.slice(40, element.length) + ", ";
+  });
+  episodes = episodes.slice(0, episodes.length-2) + ".";
+
+  let characterEpisode= document.getElementById('episodeModal');
+  characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
+
+
 }
 
-// order a-z z-a
-// const getListAtoZ = () => {
-//   let sortedAscending = [];
-//   sortedAscending = order.ascending (allCharacters);
-//   drawResults(sortedAscending);
-// }
-// document.querySelector('#orderAtoZ').addEventListener('click',getListAtoZ);
 
-// const getListZtoA = () => {
-//   let sortedDescending = [];
-//   sortedDescending = order.descending(allCharacters);
-//   drawResults(sortedDescending);
-// }
-// document.querySelector('#orderZtoA').addEventListener('click', getListZtoA);
-const filterSelection=document.querySelector('#order');
 
-filterSelection.addEventListener('change', () => {
-  const arrByName = order(allCharacters, filterSelection.value);
-  insertRCharacter.innerHTML = drawCharactersPage(arrByName);
-});
 
+const close = document.getElementById("xClose");
+close.addEventListener('click', () => {
+  let myModal = document.getElementById('myModal');
+  myModal.style.visibility = "hidden";
+})
 
 
 

@@ -18,18 +18,18 @@
 
                                                                          <!-- start Home  -->
     <section id="homeSection">
-      <div class="home">
+      <figure class="home">
          <img src="images/spaceHome.jpg" alt="backgroundPrincipal">
          <button id="btnFirst" class="btnFirst">Start</button>
-      </div>
+      </figure>
     </section>
 
                                                                                <!--header section -->
     <header class="hide" id="logoHeader">
-      <div class="boxName" id="boxName" >
+      <section class="boxName" id="boxName" >
         <img class="icon" src="images/rickMortyIcon.png" alt="Icono Rick y Morty">
         <img class="logotipe" src="images/rickMortyLogotipe.png" alt="Logotipo de Rick y Morty"  width="149" height= "467";>
-      </div>
+      </section>
     </header>
 
                                                                         <!--principal nav section -->
@@ -65,7 +65,7 @@
         <p>Origin</p>
         </select>
           <select id = "origin">
-          <option>--Selecionar--</option>
+          <option>--Select--</option>
           <option>Earth (Replacement Dimension)</option>
           <option>Abadango</option>
           <option>Earth (C-137)</option>
@@ -184,13 +184,13 @@
 
 
        <!-- Pagination -->
-       <div id="buttonsContainer" class="buttonsContainer active"></div>
+       <section id="buttonsContainer" class="buttonsContainer active"></section>
        <!-- character description  -->
 
-       <a href="#myModal">Abrir Modal</a>
+       <a href="#myModal"></a>
        <section id = "myModal" class="modal">
          <section class="modalContent">
-           <a href="#">X</a>
+           <p id= "xClose" class="close">X</p>
            <section id="informationModal">
            <img id="photoModal" src="" alt="">
              <section id="paragraphModal">
@@ -204,7 +204,7 @@
              <p id="episodeModal">Episode:</p>
              </section>
            </section>
-           <h3 id ="nameModal">kkk</h3>
+           <h3 id ="nameModal"></h3>
          </section>
        </section>
 
@@ -225,10 +225,10 @@
           <li class=""><a href="https://twitter.com/rickandmorty"  target="_blank" class="fa fa-twitter-square" href="#"></a></li>
           <li class=""><a href="https://www.instagram.com/rickandmorty/?hl=es" target="_blank" class="fa fa-instagram"  ></a></li>
       </ul>
-      <div class="allRightsReserved">
+      <section class="allRightsReserved">
         <img src="images/rickFooter.png" alt="Icono de Footer">
         <span >Derechos Reservados</span>
-      </div>
+      </section>
     </footer>
     <script 
     src="main.js" type="module" 

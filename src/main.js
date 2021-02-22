@@ -2,6 +2,8 @@
 import {dataSort} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
+let listFilter = allCharacters;
+
 // Ordenando la data alfabeticamnete
 /*
 const orderAll = allCharacters.sort((a,b) => {
@@ -157,6 +159,7 @@ searchBar.addEventListener('keyup',(e) => {
    return character.name.toLowerCase().includes(searchString);
  });
  
+ listFilter = filteredCharacters; //metemos en la variable los elementos filtrados por la caja de busqueda
  drawResults(filteredCharacters);
 
  let notFound = document.getElementById('notFound');
@@ -230,14 +233,16 @@ const orderAll = document.querySelector("#order");
 
 
 orderAll.addEventListener( "change" , (event) => {
-  console.log(event.target.value);
+  //console.log(event.target.value);
     document.getElementById("cards").innerHTML="";
-    const ordenar = Object.keys(allCharacters).map(key => {
+    /*const ordenar = Object.keys(allCharacters).map(key => {
      
       return allCharacters[key];
-    })
+    })*/
    
-    let sortData =dataSort(ordenar,"name",event.target.value);
+
+    let sortData =dataSort(listFilter,"name",event.target.value); //pasamos la lista filtrada en vez de la lista completa.
+    
    
   
     

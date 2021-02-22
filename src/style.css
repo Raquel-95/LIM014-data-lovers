@@ -168,6 +168,20 @@ div{
   font-size: 25px;
 }
 
+/*aviso: No encontrado*/
+#notFound{
+  color: aliceblue;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px;
+  padding: 50px;
+  font-family: roboto;
+}
+
+
+
 
 /* header flex :D******************************* */
 /* header******************************* */

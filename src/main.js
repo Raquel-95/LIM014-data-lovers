@@ -138,12 +138,7 @@ createEpisodes();
 
   let characterEpisode= document.getElementById('episodeModal');
   characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
-
-
 }
-
-
-
 
 const close = document.getElementById("xClose");
 close.addEventListener('click', () => {
@@ -161,8 +156,15 @@ searchBar.addEventListener('keyup',(e) => {
  const filteredCharacters = allCharacters.filter(character => {
    return character.name.toLowerCase().includes(searchString);
  });
+ 
+ drawResults(filteredCharacters);
 
- drawResults(filteredCharacters)
+ let notFound = document.getElementById('notFound');
+ if (filteredCharacters.length == 0) {
+   notFound.style.visibility = "visible"; console.log("no hay :c");
+  }else{
+   notFound.style.visibility = "hidden"; console.log('si hay c:');
+ }
 });
 
 

@@ -181,7 +181,17 @@ div{
   visibility: collapse;
 }
 
-
+/* paginacion */
+#buttonsContainer button{
+  color: white;
+  background-color: turquoise;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 20%;
+  border-color: greenyellow;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 /* header flex :D******************************* */

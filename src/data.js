@@ -38,3 +38,39 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
   }
 
 };
+
+
+export const statusData = (allCharacters, statusAll) => {
+  console.log("entreeee");
+   let result = [];
+  // for (let i = 0; i < allCharacters.length; i++){
+  // console.log(statusAll);
+  //     if(allCharacters[i].status === statusAll){
+  //       console.log(allCharacters[i].status);
+
+  //       result.push(allCharacters[i])
+  //     }
+
+  //     console.log(result);
+
+  // }
+console.log(statusAll);
+  // if(statusAll === "--Select--"){
+   //funcion anonima
+     // result = allCharacters;
+
+  //   console.log(result);
+  
+  // }
+  // else{
+    //  result = allCharacters.filter( character=> character.status ===statusAll);
+    allCharacters = allCharacters.filter( character=> character.status ===statusAll);
+     console.log(result);
+  // }
+
+  // return result
+  return allCharacters
+
+
+};
+

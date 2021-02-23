@@ -1,5 +1,5 @@
 
-import {dataSort} from './data.js'
+import {dataSort, statusData} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 // Ordenando la data alfabeticamnete
@@ -154,43 +154,37 @@ close.addEventListener('click', () => {
 
 
 // ***********************************************************Searching**************1
-
+let eachCharacter = Object.keys(allCharacters).map(key => {return allCharacters[key];});
 const searchBar=document.getElementById('searchByName');
 searchBar.addEventListener('keyup',(e) => {
  const searchString= e.target.value.toLowerCase();
- const filteredCharacters = allCharacters.filter(character => {
+ const filteredCharacters = eachCharacter.filter(character => {
    return character.name.toLowerCase().includes(searchString);
  });
 
  drawResults(filteredCharacters)
 });
 
-
+let displayHome = document.getElementById("homeSection");
+let displayLogo=document.getElementById("logoHeader");
+let displayPrincipalNav=document.getElementById("nav");
+let displaySubheader=document.getElementById("subheaderSection");
+let displayCharacters=document.getElementById("charactersSection");
+let displayFooter=document.getElementById("footerSection");
+let displayAbout=document.getElementById("aboutSection");
+let displayStatistics=document.getElementById("statisticsSection");
+let displayAdvancedFilter=document.getElementById("advancedFilter");
 
 // ***********************************************************click start home**************1
 document.querySelector('#btnFirst').addEventListener('click', getEnter );
 function getEnter(){
-    // *************************************************hide start home ******
-    let displayHome = document.getElementById("homeSection");
     displayHome.classList.add("hide");
-    // ************************************************show header section******
-    let displayLogo=document.getElementById("logoHeader");
     displayLogo.classList.remove("hide");
-    // *********************************************show principal nav section******
-    let displayPrincipalNav=document.getElementById("nav");
     displayPrincipalNav.classList.remove("hide");
-    // **********************************************show search & order section******
-    let displaySubheader=document.getElementById("subheaderSection");
     displaySubheader.classList.remove("hide");
-    // ************************************************show character section******
-    let displayCharacters=document.getElementById("charactersSection");
     displayCharacters.classList.remove("hide");
-    // ************************************************show footer section******
-    let displayFooter=document.getElementById("footerSection");
     displayFooter.classList.remove("hide");
 }
-
-
 
 
 // *******************************************************************************************click and return************2
@@ -198,29 +192,39 @@ document.querySelector('#boxName').addEventListener('click', previousMain );
  
 function previousMain(){
   // *************************************************show start home ******
-  let displayHome = document.getElementById("homeSection");
   displayHome.classList.remove("hide");
   // ************************************************remove header section******
-  let displayLogo=document.getElementById("logoHeader");
   displayLogo.classList.add("hide");
   // *********************************************remove principal nav section******
-  let displayPrincipalNav=document.getElementById("nav");
   displayPrincipalNav.classList.add("hide");
   // **********************************************remove search & order section******
-  let displaySubheader=document.getElementById("subheaderSection");
   displaySubheader.classList.add("hide");
   // ************************************************remove character section******
-  let displayCharacters=document.getElementById("charactersSection");
   displayCharacters.classList.add("hide");
   // ************************************************remove oothers about and stat******
-  let displayAbout=document.getElementById("aboutSection");
   displayAbout.classList.add("hide");
-  let displayStatistics=document.getElementById("statisticsSection");
   displayStatistics.classList.add("hide");
   // ************************************************remove footer section******
-  let displayFooter=document.getElementById("footerSection");
   displayFooter.classList.add("hide");
 }
+
+// *********************************************************************************click and show about************2
+document.querySelector('#aboutbutton').addEventListener('click', aboutInfo );
+ 
+function aboutInfo(){
+ 
+  
+  // **********************************************remove search & order section******
+  displaySubheader.classList.add("hide");
+  // ************************************************remove character section******
+  displayCharacters.classList.add("hide");
+  displayAdvancedFilter.classList.add("hide");
+  // ************************************************remove oothers about and stat******
+  displayAbout.classList.remove("hide");
+  displayStatistics.classList.add("hide");
+
+}
+
 
 
 // ***********************************************************orde a-z 
@@ -230,21 +234,34 @@ const orderAll = document.querySelector("#order");
 orderAll.addEventListener( "change" , (event) => {
   console.log(event.target.value);
     document.getElementById("cards").innerHTML="";
-    const ordenar = Object.keys(allCharacters).map(key => {
-     
-      return allCharacters[key];
-    })
-   
-    let sortData =dataSort(ordenar,"name",event.target.value);
-   
-  
-    
-          // const ordenO = Object.entries(sortData);
-     const ordenO = sortData;
-     console.log(sortData);   
+    // const ordenar = Object.keys(allCharacters).map(key => {return allCharacters[key];});
+    let sortData =dataSort(eachCharacter,"name",event.target.value);
+     const ordenAll = sortData;
+     eachCharacter = sortData;
                
-     return drawResults(ordenO);  
-  
-    
+     return drawResults(eachCharacter);  
   });
-  console.log(allCharacters)
+
+// **********************************************************order data status
+   const orderByStatus = document.querySelector("#estado_vida");
+
+   orderByStatus.addEventListener("change", (event) => {
+    document.getElementById("cards").innerHTML="";
+    // const allData = Object.keys(allCharacters).map(key =>{
+    //     return allCharacters[key];
+    // })
+        let dataFilter = statusData( eachCharacter, event.target.value);
+        eachCharacter = dataFilter;
+        // const filterR = dataFilter;
+        // console.log(dataFilter);   
+               
+      //  return drawResults(filterR);  
+      console.log(event);
+    
+      console.log(  event.target.disable);
+      var elementSelect = numbers.map(function(num) {
+        return Math.sqrt(num);
+    });
+       console.log(orderByStatus.target);
+      return drawResults(eachCharacter); 
+}); 

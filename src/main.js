@@ -1,5 +1,5 @@
 
-import {dataSort, statusData} from './data.js'
+import {dataSort, kindFeaturesFilter} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
 let listFilter = allCharacters;
@@ -234,59 +234,97 @@ function aboutInfo(){
 
 // ***********************************************************orde a-z 
 const orderAll = document.querySelector("#order");
-let sortData = undefined ;
+let sortData = [] ;
 
 orderAll.addEventListener( "change" , (event) => {
-  //console.log(event.target.value);
     document.getElementById("cards").innerHTML="";
-    /*const ordenar = Object.keys(allCharacters).map(key => {
-     
-      return allCharacters[key];
-    })*/
-   
-
-sortData =dataSort(listFilter,"name",event.target.value); 
+    sortData =dataSort(listFilter,"name",event.target.value); 
     //pasamos la lista filtrada en vez de la lista completa.
-    
-   
-        // const ordenO = Object.entries(sortData);
+    // const ordenO = Object.entries(sortData);
      const ordenO = sortData;
-     console.log(sortData);   
-               
+     console.log(sortData);              
      return drawResults(ordenO);  
   });
 
 // **********************************************************order data status
    const orderByStatus = document.querySelector("#estado_vida");
+   const orderBySpecies = document.querySelector("#species");
+   const orderByGender = document.querySelector("#gender");
+   const orderByOrigin = document.querySelector("#origin");
+   const orderByEpisodes = document.querySelector("#episodes");
 
    orderByStatus.addEventListener("change", (event) => {  
      document.getElementById("cards").innerHTML="";
-if(sortData === undefined ){
-  let dataFilter = statusData( listFilter, event.target.value);
-  eachCharacter = dataFilter;  
-}
+      if(sortData.length == 0 ){
+        let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"status");
+         eachCharacter = dataFilter;  
+      }
    else{
-    let dataFilter = statusData( listFilter, event.target.value);
+    let dataFilter = kindFeaturesFilter( sortData, event.target.value,"status");
     eachCharacter = dataFilter;
 
    }
-    // const allData = Object.keys(allCharacters).map(key =>{
-    //     return allCharacters[key];
-    // })
-       // let dataFilter = statusData( listFilter, event.target.value);
-       //  eachCharacter = dataFilter;
-        // const filterR = dataFilter;
-        // console.log(dataFilter);   
-               
-      //  return drawResults(filterR);  
-     //  console.log(event);
-    
-      // console.log(  event.target.disable);
-    //   var elementSelect = numbers.map(function(num) {
-    //     return Math.sqrt(num);
-    // });
-      //  console.log();
+
       return drawResults(eachCharacter); 
 }); 
 
-orderByStatus.addEventListener("change", (event) => {  });
+//spec
+
+orderBySpecies.addEventListener("change", (event) => {      document.getElementById("cards").innerHTML="";
+if(eachCharacter.length >= 0 ){
+  let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"species");
+  eachCharacter = dataFilter;  
+}
+   else{
+    let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"species");
+    eachCharacter = dataFilter;
+
+   } 
+   
+   return drawResults(eachCharacter);  });
+
+
+///geneder
+
+   orderByGender.addEventListener("change", (event) => { 
+      document.getElementById("cards").innerHTML="";
+      if(eachCharacter.length >= 0 ){
+      let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"gender");
+      eachCharacter = dataFilter;  
+}
+   else{
+    let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"gender");
+    eachCharacter = dataFilter;
+
+   } 
+   
+   return drawResults(eachCharacter);  });
+
+   
+
+
+   orderByOrigin.addEventListener("change", (event) => { 
+    document.getElementById("cards").innerHTML="";
+    if(eachCharacter.length >= 0 ){
+      console.log(event.target.value);
+    let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"origin");
+    eachCharacter = dataFilter;  
+}
+ else{
+  let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"origin");
+  eachCharacter = dataFilter;
+
+ } 
+ 
+ return drawResults(eachCharacter);  });
+
+
+ orderByEpisodes.addEventListener("change", (event) => { 
+  document.getElementById("cards").innerHTML="";
+
+let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"episodes");
+eachCharacter = dataFilter;
+
+
+
+return drawResults(eachCharacter);  });

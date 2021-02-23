@@ -168,6 +168,58 @@ div{
   font-size: 25px;
 }
 
+/*aviso: No encontrado*/
+#notFound{
+  color: aliceblue;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 50px;
+  font-family: roboto;
+  visibility: collapse;
+}
+
+/* paginacion */
+#buttonsContainer button{
+  color: white;
+  background-color: turquoise;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 20%;
+  border-color: greenyellow;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*Home*/
+.home{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  background-image: url("images/spaceHome.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 730px;
+  height: 630px;
+}
+
+#btnFirst{
+  display: block; 
+  margin-top: 305px;
+  margin-left: 275px;
+  position: absolute;
+  width: 152px;
+  height: 45px;
+  font-size: 35px;
+  background-color: greenyellow;
+  border: solid turquoise 4px;
+  font-family: roboto;
+}
+
 
 /* header flex :D******************************* */
 /* header******************************* */

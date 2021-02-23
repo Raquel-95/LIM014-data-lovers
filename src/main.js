@@ -2,6 +2,8 @@
 import {dataSort, statusData} from './data.js'
 import allCharacters from './data/rickandmorty/rickandmorty.js';
 
+let listFilter = allCharacters;
+
 // Ordenando la data alfabeticamnete
 /*
 const orderAll = allCharacters.sort((a,b) => {
@@ -138,12 +140,7 @@ createEpisodes();
 
   let characterEpisode= document.getElementById('episodeModal');
   characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
-
-
 }
-
-
-
 
 const close = document.getElementById("xClose");
 close.addEventListener('click', () => {
@@ -161,8 +158,16 @@ searchBar.addEventListener('keyup',(e) => {
  const filteredCharacters = eachCharacter.filter(character => {
    return character.name.toLowerCase().includes(searchString);
  });
+ 
+ listFilter = filteredCharacters; //metemos en la variable los elementos filtrados por la caja de busqueda
+ drawResults(filteredCharacters);
 
- drawResults(filteredCharacters)
+ let notFound = document.getElementById('notFound');
+ if (filteredCharacters.length == 0) {
+   notFound.style.visibility = "visible"; console.log("no hay :c");
+  }else{
+   notFound.style.visibility = "hidden"; console.log('si hay c:');
+ }
 });
 
 let displayHome = document.getElementById("homeSection");
@@ -229,28 +234,38 @@ function aboutInfo(){
 
 // ***********************************************************orde a-z 
 const orderAll = document.querySelector("#order");
-
+let sortData ;
 
 orderAll.addEventListener( "change" , (event) => {
-  console.log(event.target.value);
+  //console.log(event.target.value);
     document.getElementById("cards").innerHTML="";
-    // const ordenar = Object.keys(allCharacters).map(key => {return allCharacters[key];});
-    let sortData =dataSort(eachCharacter,"name",event.target.value);
-     const ordenAll = sortData;
-     eachCharacter = sortData;
+    /*const ordenar = Object.keys(allCharacters).map(key => {
+     
+      return allCharacters[key];
+    })*/
+   
+
+sortData =dataSort(listFilter,"name",event.target.value); 
+    //pasamos la lista filtrada en vez de la lista completa.
+    
+   
+        // const ordenO = Object.entries(sortData);
+     const ordenO = sortData;
+     console.log(sortData);   
                
-     return drawResults(eachCharacter);  
+     return drawResults(ordenO);  
   });
 
 // **********************************************************order data status
    const orderByStatus = document.querySelector("#estado_vida");
 
    orderByStatus.addEventListener("change", (event) => {
+     
     document.getElementById("cards").innerHTML="";
     // const allData = Object.keys(allCharacters).map(key =>{
     //     return allCharacters[key];
     // })
-        let dataFilter = statusData( eachCharacter, event.target.value);
+        let dataFilter = statusData( listFilter, event.target.value);
         eachCharacter = dataFilter;
         // const filterR = dataFilter;
         // console.log(dataFilter);   
@@ -258,10 +273,10 @@ orderAll.addEventListener( "change" , (event) => {
       //  return drawResults(filterR);  
       console.log(event);
     
-      console.log(  event.target.disable);
-      var elementSelect = numbers.map(function(num) {
-        return Math.sqrt(num);
-    });
-       console.log(orderByStatus.target);
+      // console.log(  event.target.disable);
+    //   var elementSelect = numbers.map(function(num) {
+    //     return Math.sqrt(num);
+    // });
+       console.log();
       return drawResults(eachCharacter); 
 }); 

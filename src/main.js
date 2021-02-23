@@ -234,7 +234,7 @@ function aboutInfo(){
 
 // ***********************************************************orde a-z 
 const orderAll = document.querySelector("#order");
-let sortData ;
+let sortData = undefined ;
 
 orderAll.addEventListener( "change" , (event) => {
   //console.log(event.target.value);
@@ -259,24 +259,34 @@ sortData =dataSort(listFilter,"name",event.target.value);
 // **********************************************************order data status
    const orderByStatus = document.querySelector("#estado_vida");
 
-   orderByStatus.addEventListener("change", (event) => {
-     
-    document.getElementById("cards").innerHTML="";
+   orderByStatus.addEventListener("change", (event) => {  
+     document.getElementById("cards").innerHTML="";
+if(sortData === undefined ){
+  let dataFilter = statusData( listFilter, event.target.value);
+  eachCharacter = dataFilter;  
+}
+   else{
+    let dataFilter = statusData( listFilter, event.target.value);
+    eachCharacter = dataFilter;
+
+   }
     // const allData = Object.keys(allCharacters).map(key =>{
     //     return allCharacters[key];
     // })
-        let dataFilter = statusData( listFilter, event.target.value);
-        eachCharacter = dataFilter;
+       // let dataFilter = statusData( listFilter, event.target.value);
+       //  eachCharacter = dataFilter;
         // const filterR = dataFilter;
         // console.log(dataFilter);   
                
       //  return drawResults(filterR);  
-      console.log(event);
+     //  console.log(event);
     
       // console.log(  event.target.disable);
     //   var elementSelect = numbers.map(function(num) {
     //     return Math.sqrt(num);
     // });
-       console.log();
+      //  console.log();
       return drawResults(eachCharacter); 
 }); 
+
+orderByStatus.addEventListener("change", (event) => {  });

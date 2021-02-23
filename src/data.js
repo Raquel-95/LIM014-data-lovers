@@ -57,19 +57,19 @@ export const statusData = (allCharacters, statusAll) => {
 console.log(statusAll);
   // if(statusAll === "--Select--"){
    //funcion anonima
-     // result = allCharacters;
+    result = allCharacters;
 
   //   console.log(result);
   
   // }
   // else{
     //  result = allCharacters.filter( character=> character.status ===statusAll);
-    allCharacters = allCharacters.filter( character=> character.status ===statusAll);
+    result = result.filter( character=> character.status ===statusAll);
      console.log(result);
   // }
 
   // return result
-  return allCharacters
+  return result
 
 
 };

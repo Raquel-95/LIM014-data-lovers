@@ -1,7 +1,7 @@
 
 // Filtrado por orden A-Z/ Z-A
 export const dataSort = (allCharacters, sortBy, sortOrder) => {
-  console.log("entre dibidubsdip");
+  //console.log("entre dibidubsdip");
   if (sortBy === "name" && sortOrder === "orderAtoZ"){
     return allCharacters.sort((a, b)=> { 
       if (a.name > b.name) {

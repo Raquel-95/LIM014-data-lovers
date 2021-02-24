@@ -37,7 +37,7 @@ function drawResults(arrayOfCharacters){
           button.appendChild(buttonText);
   
           if (pageIndex == 0) button.classList.add('active');
-  
+
           button.addEventListener('click', function () {
               pageIndex == pageIndex;
               drawCharactersPage(pageIndex, arrayOfCharacters);
@@ -164,9 +164,9 @@ searchBar.addEventListener('keyup',(e) => {
 
  let notFound = document.getElementById('notFound');
  if (filteredCharacters.length == 0) {
-   notFound.style.visibility = "visible"; console.log("no hay :c");
+   notFound.style.visibility = "visible"; //console.log("no hay :c");
   }else{
-   notFound.style.visibility = "hidden"; console.log('si hay c:');
+   notFound.style.visibility = "hidden"; //console.log('si hay c:');
  }
 });
 
@@ -239,19 +239,13 @@ orderAll.addEventListener( "change" , (event) => {
      
       return allCharacters[key];
     })*/
-   
-
     let sortData =dataSort(listFilter,"name",event.target.value); //pasamos la lista filtrada en vez de la lista completa.
-    
-   
-  
-    
           // const ordenO = Object.entries(sortData);
      const ordenO = sortData;
-     console.log(sortData);   
+     //console.log(sortData);   
                
      return drawResults(ordenO);  
   
     
   });
-  console.log(allCharacters)
+  //console.log(allCharacters)

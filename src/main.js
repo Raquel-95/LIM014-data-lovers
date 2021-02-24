@@ -247,7 +247,7 @@ orderAll.addEventListener("change", (event) => {
 });
 
 // **********************************************************order data status
-const orderByStatus = document.querySelector("#estado_vida");
+const orderByStatus = document.querySelector("#stateLife");
 const orderBySpecies = document.querySelector("#species");
 const orderByGender = document.querySelector("#gender");
 const orderByOrigin = document.querySelector("#origin");

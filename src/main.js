@@ -1,29 +1,21 @@
+import { dataSort, filterData } from './data.js'
+import data from './data/rickandmorty/rickandmorty.js';
+let allCharacters = data.results;
 
-import { dataSort, kindFeaturesFilter } from './data.js'
-import allCharacters from './data/rickandmorty/rickandmorty.js';
+let listFilter = allCharacters; //para guardar lo que se está filtrando. 
 
-let listFilter = allCharacters;
-
-// Ordenando la data alfabeticamnete
-/*
-const orderAll = allCharacters.sort((a,b) => {
-  if (a.name > b.name ) {
-    return 1;
-  }
-  if (a.name < b.name ) {
-    return -1;
-  }
-  return 0;
-})
-console.log(orderAll.reverse()) */
+let filterConfig = { //lista para que los filtros inicien vacios.
+  name: '',
+  order: '',
+  status: '',
+  species: '',
+  gender: '',
+  origin: '',
+  episode: ''
+}
 
 // ****************************************************
 
-
-const getListAllCharacters = () => {
-  drawResults(allCharacters);
-
-}
 
 // Array and pagination
 function drawResults(arrayOfCharacters) {
@@ -92,7 +84,7 @@ function drawCharactersPage(index, arrayOfCharacters) {
   }
 }
 // *********************************************************************click and show characteres***********
-document.querySelector('#btnFirst').addEventListener('click', getListAllCharacters);
+//document.querySelector('#btnFirst').addEventListener('click', getListAllCharacters);
 
 // ***************************************************episodios del 1-31
 
@@ -102,6 +94,7 @@ function createEpisodes() {
   let episodios = document.getElementById("episodes");
   for (let i = 1; i <= 31; i++) {
     let option = document.createElement("option");//1° crear elemento de tipo option.
+    option.value = i;
     let textnode = document.createTextNode(i);// 2° crear elemento de tipo texto.
     option.appendChild(textnode); //3° agrega el elemnto de texto dentro de elemento option.
     episodios.appendChild(option); //4° agrega elemento option dentro de elemento select. 
@@ -149,27 +142,7 @@ close.addEventListener('click', () => {
 })
 
 
-
 // ***********************************************************Searching**************1
-let eachCharacter = Object.keys(allCharacters).map(key => { return allCharacters[key]; });
-const searchBar = document.getElementById('searchByName');
-searchBar.addEventListener('keyup', (e) => {
-  const searchString = e.target.value.toLowerCase();
-  const filteredCharacters = eachCharacter.filter(character => {
-    return character.name.toLowerCase().includes(searchString);
-  });
-
-  listFilter = filteredCharacters; //metemos en la variable los elementos filtrados por la caja de busqueda
-  drawResults(filteredCharacters);
-
-  let notFound = document.getElementById('notFound');
-  if (filteredCharacters.length == 0) {
-    notFound.style.visibility = "visible"; //console.log("no hay :c");
-  } else {
-    notFound.style.visibility = "hidden"; //console.log('si hay c:');
-  }
-});
-
 let displayHome = document.getElementById("homeSection");
 let displayLogo = document.getElementById("logoHeader");
 let displayPrincipalNav = document.getElementById("nav");
@@ -189,6 +162,8 @@ function getEnter() {
   displaySubheader.classList.remove("hide");
   displayCharacters.classList.remove("hide");
   displayFooter.classList.remove("hide");
+
+  searchFilter();
 }
 
 
@@ -234,102 +209,64 @@ function aboutInfo() {
 
 // ***********************************************************orde a-z 
 const orderAll = document.querySelector("#order");
-let sortData = [];
 
 orderAll.addEventListener("change", (event) => {
   document.getElementById("cards").innerHTML = "";
-  sortData = dataSort(listFilter, "name", event.target.value);
+  const sortData = dataSort(listFilter, "name", event.target.value);
   //pasamos la lista filtrada en vez de la lista completa.
   // const ordenO = Object.entries(sortData);
-  const ordenO = sortData;
-  console.log(sortData);
-  return drawResults(ordenO);
+  return drawResults(sortData);
 });
 
 // **********************************************************order data status
-const orderByStatus = document.querySelector("#stateLife");
+const orderByStatus = document.querySelector("#stateLife"); //querySelector funciona como getElementById pero con varios selectores.
 const orderBySpecies = document.querySelector("#species");
 const orderByGender = document.querySelector("#gender");
 const orderByOrigin = document.querySelector("#origin");
 const orderByEpisodes = document.querySelector("#episodes");
+const searchBar = document.getElementById('searchByName');
 
-orderByStatus.addEventListener("change", (event) => {
-  document.getElementById("cards").innerHTML = "";
-  if (sortData.length == 0) {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "status");
-    eachCharacter = dataFilter;
-  }
-  else {
-    let dataFilter = kindFeaturesFilter(sortData, event.target.value, "status");
-    eachCharacter = dataFilter;
-
-  }
-
-  return drawResults(eachCharacter);
+orderByStatus.addEventListener("change", () => {
+  searchFilter();
 });
 
-//spec
+orderBySpecies.addEventListener("change", () => {
+  searchFilter();
+});
 
-orderBySpecies.addEventListener("change", (event) => {
-  document.getElementById("cards").innerHTML = "";
-  if (eachCharacter.length >= 0) {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "species");
-    eachCharacter = dataFilter;
-  }
-  else {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "species");
-    eachCharacter = dataFilter;
+orderByGender.addEventListener("change", () => {
+  searchFilter();
+});
 
-  }
+orderByOrigin.addEventListener("change", () => {
+  searchFilter();
+});
 
-  return drawResults(eachCharacter);
+orderByEpisodes.addEventListener("change", () => {
+  searchFilter();
+});
+
+searchBar.addEventListener('keyup', (e) => {
+  searchFilter();
 });
 
 
-///geneder
+function searchFilter() {
+  filterConfig.name = searchBar.value;
+  filterConfig.status = orderByStatus.value;
+  filterConfig.species = orderBySpecies.value;
+  filterConfig.gender = orderByGender.value;
+  filterConfig.origin = orderByOrigin.value;
+  filterConfig.episode = orderByEpisodes.value;
 
-orderByGender.addEventListener("change", (event) => {
-  document.getElementById("cards").innerHTML = "";
-  if (eachCharacter.length >= 0) {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "gender");
-    eachCharacter = dataFilter;
+  listFilter = filterData(allCharacters, filterConfig);
+
+  drawResults(listFilter);
+
+  let notFound = document.getElementById('notFound');
+  if (listFilter.length == 0) {
+    notFound.style.visibility = "visible";
+  } else {
+    notFound.style.visibility = "hidden";
   }
-  else {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "gender");
-    eachCharacter = dataFilter;
-
-  }
-
-  return drawResults(eachCharacter);
-});
-
-
-
-
-orderByOrigin.addEventListener("change", (event) => {
-  document.getElementById("cards").innerHTML = "";
-  if (eachCharacter.length >= 0) {
-    console.log(event.target.value);
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "origin");
-    eachCharacter = dataFilter;
-  }
-  else {
-    let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "origin");
-    eachCharacter = dataFilter;
-
-  }
-
-  return drawResults(eachCharacter);
-});
-
-
-orderByEpisodes.addEventListener("change", (event) => {
-  document.getElementById("cards").innerHTML = "";
-
-  let dataFilter = kindFeaturesFilter(listFilter, event.target.value, "episodes");
-  eachCharacter = dataFilter;
-
-
-
-  return drawResults(eachCharacter);
-});
+}

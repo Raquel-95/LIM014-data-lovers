@@ -206,6 +206,18 @@ function aboutInfo() {
 
 }
 
+document.querySelector('#statisticsbutton').addEventListener('click', statisticsInfo);
+
+function statisticsInfo(){
+  displaySubheader.classList.add("hide");
+  // ************************************************remove character section******
+  displayCharacters.classList.add("hide");
+  displayAdvancedFilter.classList.add("hide");
+  // ************************************************remove oothers about and stat******
+  displayAbout.classList.add("hide");
+  displayStatistics.classList.remove("hide");
+
+}
 
 
 // ***********************************************************orde a-z 

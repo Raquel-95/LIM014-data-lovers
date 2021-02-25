@@ -83,8 +83,6 @@ function drawCharactersPage(index, arrayOfCharacters) {
 
   }
 }
-// *********************************************************************click and show characteres***********
-//document.querySelector('#btnFirst').addEventListener('click', getListAllCharacters);
 
 // ***************************************************episodios del 1-31
 

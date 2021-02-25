@@ -1,3 +1,4 @@
+
 import { dataSort, filterData } from './data.js'
 import data from './data/rickandmorty/rickandmorty.js';
 let allCharacters = data.results;
@@ -153,22 +154,6 @@ let displayAbout = document.getElementById("aboutSection");
 let displayStatistics = document.getElementById("statisticsSection");
 let displayAdvancedFilter = document.getElementById("advancedFilter");
 
-
-const navSelector = document.getElementById('nav');
-
-let allSelectFilters = navSelector.querySelectorAll('select');
-
-console.log(allSelectFilters);
-
-
-
-
-
-
-
-
-
-
 // ***********************************************************click start home**************1
 document.querySelector('#btnFirst').addEventListener('click', getEnter);
 function getEnter() {
@@ -184,25 +169,25 @@ function getEnter() {
 
 
 // *******************************************************************************************click and return************2
-// document.querySelector('#boxName').addEventListener('click', previousMain );
- 
-// function previousMain(){
-//   // *************************************************show start home ******
-//   displayHome.classList.remove("hide");
-//   // ************************************************remove header section******
-//   displayLogo.classList.add("hide");
-//   // *********************************************remove principal nav section******
-//   displayPrincipalNav.classList.add("hide");
-//   // **********************************************remove search & order section******
-//   displaySubheader.classList.add("hide");
-//   // ************************************************remove character section******
-//   displayCharacters.classList.add("hide");
-//   // ************************************************remove oothers about and stat******
-//   displayAbout.classList.add("hide");
-//   displayStatistics.classList.add("hide");
-//   // ************************************************remove footer section******
-//   displayFooter.classList.add("hide");
-// }
+document.querySelector('#boxName').addEventListener('click', previousMain);
+
+function previousMain() {
+  // *************************************************show start home ******
+  displayHome.classList.remove("hide");
+  // ************************************************remove header section******
+  displayLogo.classList.add("hide");
+  // *********************************************remove principal nav section******
+  displayPrincipalNav.classList.add("hide");
+  // **********************************************remove search & order section******
+  displaySubheader.classList.add("hide");
+  // ************************************************remove character section******
+  displayCharacters.classList.add("hide");
+  // ************************************************remove oothers about and stat******
+  displayAbout.classList.add("hide");
+  displayStatistics.classList.add("hide");
+  // ************************************************remove footer section******
+  displayFooter.classList.add("hide");
+}
 
 // *********************************************************************************click and show about************2
 document.querySelector('#aboutbutton').addEventListener('click', aboutInfo);
@@ -225,51 +210,6 @@ function aboutInfo() {
 
 // ***********************************************************orde a-z 
 const orderAll = document.querySelector("#order");
-let sortData = [] ;
-
-orderAll.addEventListener( "change" , (event) => {
-    document.getElementById("cards").innerHTML="";
-    sortData =dataSort(listFilter,"name",event.target.value); 
-    //pasamos la lista filtrada en vez de la lista completa.
-    // const ordenO = Object.entries(sortData);
-     const ordenO = sortData;
-     console.log(sortData);              
-     return drawResults(ordenO);  
-  });
-
-// **********************************************************order data status
-   const orderByStatus = document.querySelector("#estado_vida");
-   const orderBySpecies = document.querySelector("#species");
-   const orderByGender = document.querySelector("#gender");
-   const orderByOrigin = document.querySelector("#origin");
-   const orderByEpisodes = document.querySelector("#episodes");
-
-   orderByStatus.addEventListener("change", (event) => {  
-     document.getElementById("cards").innerHTML="";
-      if(sortData.length == 0 ){
-        let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"status");
-         eachCharacter = dataFilter;  
-      }
-   else{
-    let dataFilter = kindFeaturesFilter( sortData, event.target.value,"status");
-    eachCharacter = dataFilter;
-
-   }
-
-      return drawResults(eachCharacter); 
-}); 
-
-//spec
-
-orderBySpecies.addEventListener("change", (event) => {     
-   document.getElementById("cards").innerHTML="";
-if(eachCharacter.length >= 0 ){
-  let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"species");
-  eachCharacter = dataFilter;  
-}
-   else{
-    let dataFilter = kindFeaturesFilter( listFilter, event.target.value,"species");
-    eachCharacter = dataFilter;
 
 orderAll.addEventListener("change", (event) => {
   document.getElementById("cards").innerHTML = "";

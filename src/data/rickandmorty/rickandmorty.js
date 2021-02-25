@@ -1,13 +1,13 @@
 // Declara un elemento y lo añade como módulo de exportación por defecto.
 export default 
-// {
-//     "info": {
-//         "count": 493,
-//         "pages": 25,
-//         "next": "https://rickandmortyapi.com/api/character/?page=2",
-//         "prev": ""
-//     },
-//     "results": 
+ {
+     "info": {
+         "count": 493,
+         "pages": 25,
+         "next": "https://rickandmortyapi.com/api/character/?page=2",
+         "prev": ""
+     },
+     "results": 
     [
         {
               "id": 1,
@@ -11165,4 +11165,4 @@ export default
               "created": "2018-05-22T17:51:07.373Z"
             }
         ]
-    //   };
+       };

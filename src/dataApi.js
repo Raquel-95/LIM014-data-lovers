@@ -1,3 +1,10 @@
+
+function cargarUsuarios(){
+    fetch('./data/rickandmorty/rickandmorty.json')
+}
+
+
+
 fetch('./data/rickandmorty/rickandmorty.json', {
 
 })

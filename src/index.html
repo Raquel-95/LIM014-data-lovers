@@ -19,17 +19,17 @@
 </head>
 
 
-<body class="background">
+<body class="background" id='background'>
 
   <!-- start Home  -->
   <section id="homeSection">
     <figure class="home">
-      <button id="btnFirst" class="btnFirst">Start</button>
+    <button id="btnFirst" class="btnFirst">Start</button>
     </figure>
   </section>
 
   <!--header section -->
-  <header class="hide" id="logoHeader">
+  <header class="hide logoHeader" id="logoHeader">
     <section class="boxName" id="boxName">
       <img class="icon" src="images/rickMortyIcon.png" alt="Icono Rick y Morty">
       <img class="logotipe" src="images/rickMortyLogotipe.png" alt="Logotipo de Rick y Morty" width="149" height="467"
@@ -42,7 +42,9 @@
 
   <nav class="hide barNavegation" id="nav">
 
-    <section id="advancedFilter">
+    <section id="IconBars" class="IconBars"><i class="fa fa-bars"  ></i></section>
+
+    <section id="advancedFilter" class="hide">
       <p><b>Filter:</b></p>
       <p>Status</p>
       <select id="stateLife">
@@ -155,13 +157,15 @@
           _blank	Opens the linked document in a new window or tab
            -->
       <li class="boxBarNavegation line">
-        <a class="barNavegation" id="aboutbutton" href="#">About</a>
+        <a class="barNavegation1" id="aboutbutton" href="#">About</a>
       </li>
+      <span class="lineSpace">|</span>
       <li class="boxBarNavegation line">
-        <a class="barNavegation" id="statisticsbutton" href="#">Statistics</a>
+        <a class="barNavegation1" id="statisticsbutton" href="#">Statistics</a>
       </li>
+      <span class="lineSpace">|</span>
       <li class="boxBarNavegation">
-        <a class="barNavegation" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch
+        <a class="barNavegation1" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch
           online</a>
       </li>
     </ul>
@@ -176,8 +180,8 @@
 
       <select class="subheaderSection" id="order">
         <option value="" hidden selected> Order </option>
-        <option value="orderAtoZ" id="orderAtoZ">A - Z</option>
-        <option value="orderZtoA" id="orderZtoA">Z - A</option>
+        <option value="orderAtoZ" id="optionSelect orderAtoZ">A - Z</option>
+        <option value="orderZtoA" id="optionSelect orderZtoA">Z - A</option>
         <option value="none" id="none">By default</option>
       </select>
     </section>
@@ -211,13 +215,13 @@
             <img id="photoModal" src="" alt="">
             <section id="paragraphModal">
               <h2>IDENTIFICATION CARD</h2>
-              <p id="statusModal">Status:</p>
-              <p id="speciesModal">Species:</p>
-              <p id="typeModal">Type:</p>
-              <p id="genderModal">Gender:</p>
-              <p id="originModal">Origin:</p>
-              <p id="locationModal">Location:</p>
-              <p id="episodeModal">Episode:</p>
+              <p id="statusModal" class="modalInfo">Status:</p>
+              <p id="speciesModal" class="modalInfo">Species:</p>
+              <p id="typeModal" class="modalInfo">Type:</p>
+              <p id="genderModal" class="modalInfo">Gender:</p>
+              <p id="originModal" class="modalInfo">Origin:</p>
+              <p id="locationModal" class="modalInfo">Location:</p>
+              <p id="episodeModal" class="modalInfo"> Episode:</p>
             </section>
           </section>
           <h3 id="nameModal"></h3>

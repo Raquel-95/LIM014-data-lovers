@@ -185,6 +185,7 @@ function previousMain() {
   displayStatistics.classList.add("hide");
   // ************************************************remove footer section******
   displayFooter.classList.add("hide");
+  displayAdvancedFilter.classList.add("hide");
 }
 
 // *********************************************************************************click and show about************2
@@ -216,6 +217,16 @@ function statisticsInfo(){
   displayStatistics.classList.remove("hide");
 
 }
+
+document.querySelector('#IconBars').addEventListener('click', showFilter);
+
+function showFilter(){
+  displaySubheader.classList.remove("hide");
+  displayCharacters.classList.remove("hide");
+  displayAdvancedFilter.classList.remove("hide");
+  displayAbout.classList.add("hide");
+}
+
 
 
 // ***********************************************************orde a-z 

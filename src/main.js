@@ -181,7 +181,7 @@ function previousMain() {
   // ************************************************remove character section******
   displayCharacters.classList.add("hide");
   // ************************************************remove oothers about and stat******
-  displayAbout.classList.add("hide");
+  // displayAbout.classList.add("hide");
   displayStatistics.classList.add("hide");
   // ************************************************remove footer section******
   displayFooter.classList.add("hide");
@@ -189,21 +189,16 @@ function previousMain() {
 }
 
 // *********************************************************************************click and show about************2
-document.querySelector('#aboutbutton').addEventListener('click', aboutInfo);
+// document.querySelector('#aboutbutton').addEventListener('click', aboutInfo);
 
-function aboutInfo() {
+// function aboutInfo() {
+//   displaySubheader.classList.add("hide");*
+//   displayCharacters.classList.add("hide");
+//   displayAdvancedFilter.classList.add("hide");
 
-
-  // **********************************************remove search & order section******
-  displaySubheader.classList.add("hide");
-  // ************************************************remove character section******
-  displayCharacters.classList.add("hide");
-  displayAdvancedFilter.classList.add("hide");
-  // ************************************************remove oothers about and stat******
-  displayAbout.classList.remove("hide");
-  displayStatistics.classList.add("hide");
-
-}
+//   displayAbout.classList.remove("hide");
+//   displayStatistics.classList.add("hide");
+// }
 
 document.querySelector('#statisticsbutton').addEventListener('click', statisticsInfo);
 
@@ -211,20 +206,31 @@ function statisticsInfo(){
   displaySubheader.classList.add("hide");
   // ************************************************remove character section******
   displayCharacters.classList.add("hide");
-  displayAdvancedFilter.classList.add("hide");
-  // ************************************************remove oothers about and stat******
-  displayAbout.classList.add("hide");
+  // ********************************************remove oothers about and stat******
+  // displayAbout.classList.add("hide");
   displayStatistics.classList.remove("hide");
 
 }
 
-document.querySelector('#IconBars').addEventListener('click', showFilter);
+// Hamburguer show advancedFilter
+const iconMenu = document.querySelector('#iconBars'),
+menu = document.querySelector('#advancedFilter');
+iconMenu.addEventListener('click', (e) => {
+  menu.classList.toggle('active');
+})
+
+const iconMenuSecond = document.querySelector('#iconBars1');
+iconMenuSecond.addEventListener('click', (e) => {
+  menu.classList.toggle('active');
+})
+document.querySelector('#iconBars').addEventListener('click', showFilter);
 
 function showFilter(){
   displaySubheader.classList.remove("hide");
   displayCharacters.classList.remove("hide");
   displayAdvancedFilter.classList.remove("hide");
-  displayAbout.classList.add("hide");
+  displayStatistics.classList.add("hide");
+
 }
 
 
@@ -270,6 +276,7 @@ orderByEpisodes.addEventListener("change", () => {
 
 searchBar.addEventListener('keyup', (e) => {
   searchFilter();
+  
 });
 
 
@@ -287,8 +294,12 @@ function searchFilter() {
 
   let notFound = document.getElementById('notFound');
   if (listFilter.length == 0) {
-    notFound.style.visibility = "visible";
+    notFound.removeAttribute("class");
+    orderAll.classList.add("hide");
+    // notFound.style.visibility = "visible";
   } else {
-    notFound.style.visibility = "hidden";
+    notFound.classList.add("hide");;
+    orderAll.classList.remove("hide");
+    // notFound.style.visibility = "hidden";
   }
 }

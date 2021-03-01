@@ -67,7 +67,7 @@ function drawCharactersPage(index, arrayOfCharacters) {
 
     elementDiv.innerHTML = `
       <h3 class="h3List" >${result.name}</h3>
-      <img class="imageList" src="${result.image}" alt="${result.name}"/>
+      <img class="imageList" loading="lazy" src="${result.image}" alt="${result.name}"/>
       <section class="dataCard">
         <p> Status: <span> ${result.status} </span></p>
         <p> Especie: <span> ${result.species} </span></p>
@@ -223,6 +223,7 @@ const iconMenuSecond = document.querySelector('#iconBars1');
 iconMenuSecond.addEventListener('click', (e) => {
   menu.classList.toggle('active');
 })
+
 document.querySelector('#iconBars').addEventListener('click', showFilter);
 
 function showFilter(){

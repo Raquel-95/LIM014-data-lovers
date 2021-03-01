@@ -127,5 +127,3 @@ Diseño de la Interfaz de Usuario
 link a Zeplin
 Durante el reto deberás hacer tests de usabilidad con distintos usuarios, y en base a los resultados, deberás iterar tus diseños. Cuéntanos qué problemas de usabilidad detectaste a través de los tests y cómo los mejoraste en tu propuesta final.
 listado de problemas que detectaste a través de tests de usabilidad en el 
-
-

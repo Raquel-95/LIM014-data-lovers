@@ -140,6 +140,28 @@ header .icon{
   padding: 0px 0px 0px 5px;
   text-align: center;
 }
+
+/*************button clean filter************/
+#buttonCleanFilter{
+  color: white;
+  background-color: red;
+  width: 100px;
+  height: 40px;
+  padding: 0px;
+  font-size: 18px;
+  border-radius: 20%;
+  margin: 0px 10px 10px 10px;
+  border: 1px solid black;
+  align-self: colum;
+  margin-left: 40%;
+  outline: none ;
+  cursor: pointer;
+}
+#buttonCleanFilter:hover{
+  box-shadow: 0 0 5px 5px red ;
+  background-color: red ;
+}
+
 /* *******************************************************nav ** */
 
 .barNavegation{

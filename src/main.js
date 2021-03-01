@@ -302,4 +302,18 @@ function searchFilter() {
     orderAll.classList.remove("hide");
     // notFound.style.visibility = "hidden";
   }
+
+
 }
+
+//*************************clean filter *****************/
+let cleanFilter = document.getElementById("buttonCleanFilter");
+cleanFilter.addEventListener("click", () => {
+  let selectTags = document.getElementsByTagName("select");
+
+for(var i = 0; i < selectTags.length; i++) {
+  selectTags[i].selectedIndex =0;
+}  
+searchFilter();
+})
+

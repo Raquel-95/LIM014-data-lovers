@@ -144,10 +144,9 @@ header .icon{
   padding: 0px;
   font-size: 18px;
   border-radius: 20%;
-  margin: 0px 10px 10px 10px;
+  margin-top: 25px;
   border: 1px solid black;
-  align-self: colum;
-  margin-left: 40%;
+  margin-left: 35%;
   outline: none ;
   cursor: pointer;
 }
@@ -426,6 +425,7 @@ div:active{
 
   #informationModal{
     display: flex;
+    align-items: center;
     margin:0px 20px 0px 0px;
     }
 
@@ -459,7 +459,6 @@ div:active{
   }
   #nameModal{
     /*background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);*/
-    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -471,7 +470,7 @@ div:active{
     font-family: 'letterRickandMorty';
     color: green;
     text-shadow: 2px 2px black;
-    height: 130px;
+    height: 128px;
     margin: 0px;
     background-image: url('images/backgroundModal.png');
     border: 7px solid #2A2C6C;
@@ -507,12 +506,12 @@ div:active{
 }
 
 .messageNotFound {
-  color: #96be25;
-  text-shadow: 2px 2px black;
-  padding: 0px 450px;
-  font-size: 45px;
- 
-
+    color: #96be25;
+    width: 100%;
+    text-shadow: 2px 2px black;
+    justify-content: center;
+    font-size: 45px;
+    display: flex;
 }
 .imageNotFound{
   width: 300px;
@@ -582,7 +581,6 @@ footer{
 }
 .socialBars{
  /* background-color:green; */
- 
  width: 400px;
  margin: 30px 0px 0px 0px;
  padding: 0px;
@@ -596,8 +594,6 @@ a {
   text-decoration: none;
   color:white;
 }
-
-
 footer .allRightsReserved{
  display: flex;
  /* background-color: red; */
@@ -666,7 +662,7 @@ footer .allRightsReserved{
 }
 
 
- @media screen and (max-width:728px){
+ @media screen and (max-width:768px){
 
   .btnFirst {
     position: absolute;
@@ -682,6 +678,9 @@ footer .allRightsReserved{
   header .icon{
     width: 90px;
     height: 80px;
+  }
+  .nameOrder{
+    margin: 45px 0px 10px 0px;
   }
   #searchByName{
     font-size: 14px;
@@ -710,6 +709,91 @@ footer .allRightsReserved{
   .barNavegation1 {
     font-size: 22px;
    }
+   div{
+    margin: 15px;
+    width:220px ;
+    height: 410px ;
+  }
+  div:hover{
+    box-shadow: 0 0 10px 5px greenyellow ;
+    width:210px ;
+    height: 400px ;
+  }
+  div:active{
+    box-shadow: 0 0 10px 5px rgb(255, 255, 255) ;
+  }
+  .h3List{
+    font-size: 20px;
+    width: 220px;
+    margin-bottom: 20px;
+    height: 50px;    
+  }
+  .imageList{
+    margin: 0px 0px 0px 20px;
+    width: 180px;
+  
+  }
+  .dataCard p{
+    font-size: 18px;
+  }
+  .modalContent{
+    width:550px;
+    height: 440px;
+    }
+  #photoModal{
+    height: 200px;
+    width: 200px;
+    margin: 65px 20px 18px 15px;
+    }
+   #informationModal{
+    height: 350px;
+    }
+    #paragraphModal h2 {
+      /* display: flex; */
+      font-size: 23px;
+      font-family: 'Roboto', sans-serif;
+      margin: 12px 0px 20px 10px;
+      width: 250px;
+    }
+    .modalInfo{
+      font-size:16px ;      
+    }
+    #nameModal{
+      font-size: 36px;
+      height: 80px;
+    }
+    .messageNotFound {
+      font-size: 30px;
+  }
+  .imageNotFound{
+    width: 200px;
+  }
+  #buttonsContainer button{
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    border-radius: 20%;
+    margin: 0px 8px 8px 8px;
+  }
+  .socialBars{
+    width: 200px;
+    margin: 30px 0px 0px 0px;
+    font-size: 35px;
+   }
+   .lineFooterDecoration{
+    font-size: 80px;
+  }
+  .footerText p {
+    font-size: 14px;
+  }
+  a {
+    font-size: 14px;
+  }
+
+
+
+
+
 }
 /* @media screen and (max-width:1024px) and (orientation: landscape){
 

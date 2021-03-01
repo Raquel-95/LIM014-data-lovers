@@ -105,8 +105,6 @@ header .icon{
   margin:0px 10px 0px 0px;
   font-size: 16px;
   color:black;
-  width: 250px;
-  padding: 4px 0px 4px 10px;
   
 }
 
@@ -121,10 +119,6 @@ header .icon{
   background-color: black;
   border: 2px outset #C7FA6C;
   border-radius: 5px; 
-  
-  /* margin-right: 10px; */
- /* margin:0px 10px 0px 123px; */
-  font-size: 16px;
   color: white;
   padding: 4px 0px 4px 10px;
   width: 250px;
@@ -650,12 +644,50 @@ footer .allRightsReserved{
 }
 
 
- @media screen and (max-width:747px){
-   .background{
-    display: none;
-   }
-  
+ @media screen and (max-width:728px){
 
+  .btnFirst {
+    position: absolute;
+    width: 164.1px;
+    height: 41.9px;
+    margin: 309.5px 29px 0px 0px ;
+  }
+  header .logotipe{
+    width: 350px;
+    height: 100px;
+  }
+  
+  header .icon{
+    width: 90px;
+    height: 80px;
+  }
+  #searchByName{
+    font-size: 14px;
+  }
+  #searchByName:placeholder-shown{
+    width: 200px;
+  }
+  #order{
+    font-size: 14px;
+  }
+  #advancedFilter{
+    width: 320px;
+  }
+  .filterSelects{
+    font-size: 17px;
+    margin:0px 0px 0px 15px;
+   }
+   .filterId {
+    margin:0px;
+  }
+   .filterSelects select{
+    margin:5px 0px 20px 0px;
+    border-radius: 5px ;
+    font-size: 14px;
+  }
+  .barNavegation1 {
+    font-size: 22px;
+   }
 }
 /* @media screen and (max-width:1024px) and (orientation: landscape){
 

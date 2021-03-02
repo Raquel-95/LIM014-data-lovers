@@ -793,7 +793,7 @@ footer .allRightsReserved{
 @media screen and (max-width:602px){
   .modalContent{
     width:320px;
-    height: 423px;
+    height: auto;
     }
     #photoModal{
       position: absolute;
@@ -807,6 +807,10 @@ footer .allRightsReserved{
       z-index: 50;
       margin: 0px 0px 0px 25px;
       }
+      #paragraphModal {
+        font-size: 20px;
+        margin:25px 0px 30px 0px;
+    }
     
      
         #paragraphModal h2 {

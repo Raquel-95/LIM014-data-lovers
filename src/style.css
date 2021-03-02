@@ -789,11 +789,39 @@ footer .allRightsReserved{
   a {
     font-size: 14px;
   }
+}
+@media screen and (max-width:602px){
+  .modalContent{
+    width:320px;
+    height: 423px;
+    }
+    #photoModal{
+      position: absolute;
+      height: 90px;
+      width: 100px;
+      margin: 0px 0px 110px 180px;
+      z-index: 200;
+      }
+     #informationModal{
+      height: 320px;
+      z-index: 50;
+      margin: 0px 0px 0px 25px;
+      }
+    
+     
+        #paragraphModal h2 {
+          font-size: 20px;
+          margin: 10px 0px 25px 31px;
 
-
-
-
-
+      }
+      .modalInfo{
+        font-size:15px ;
+        border-bottom: none;      
+      }
+      #nameModal{
+        font-size: 34px;
+        height: 88px;
+      }
 }
 /* @media screen and (max-width:1024px) and (orientation: landscape){
 

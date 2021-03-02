@@ -34,8 +34,6 @@
   margin: auto;
   justify-content: center;
   align-content: center;
-  
- 
 }
 
 
@@ -78,11 +76,6 @@ header .icon{
   width: 151px;
   height: 130px;
   margin-top: 10px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  padding: 2.26% 0% 2.26% 0%; */
 }
 /* ************************************************************************************************** */
 /* ************search box and order ******************* */
@@ -172,22 +165,17 @@ header .icon{
   width: 55px;
   z-index: 50;
   position: relative;
-  
-  /* border: 2px solid green; */
 
 }
 .fa-bars{
-  /* background-color: red; */
   z-index: 10;
    color: white;
    font-size: 35px;
    align-self: center;
    margin-left: 20px;
    padding-top: 10px;
-   /* padding: 10px 15px 0px 15px ; */
    cursor: pointer;
    display: flex;
-   /* position:fixed; */
    
 }
 .fa-bars:hover{
@@ -720,6 +708,10 @@ footer .allRightsReserved{
     border-radius: 5px ;
     font-size: 14px;
   }
+  .barNavegation {
+    font-size: 22px;
+    margin-top: 15px;
+   }
   .barNavegation1 {
     font-size: 22px;
    }
@@ -730,7 +722,7 @@ footer .allRightsReserved{
   }
   div:hover{
     box-shadow: 0 0 10px 5px greenyellow ;
-    width:210px ;
+    width:221px ;
     height: 400px ;
   }
   div:active{
@@ -812,7 +804,11 @@ footer .allRightsReserved{
 @media screen and (max-width:602px){
   .modalContent{
     width:320px;
-    height: auto;
+    height: 435px;
+    }
+    .close{
+      position: absolute;
+      z-index: 300;
     }
     #photoModal{
       position: absolute;
@@ -822,9 +818,9 @@ footer .allRightsReserved{
       z-index: 200;
       }
      #informationModal{
-      height: 320px;
-      z-index: 50;
-      margin: 80px 0px 0px 25px;
+      height: 380px;
+      z-index: 100;
+      margin: 65px 0px 0px 25px;
       }
       #paragraphModal {
         font-size: 20px;
@@ -845,43 +841,130 @@ footer .allRightsReserved{
         font-size: 34px;
         height: 88px;
         width: 315px;
-        margin: 220px 0px 0px -30px;
+        margin: 255px 0px 0px -30px;
       }
 }
-@media screen and (max-width:508px){
-    #photoModal{
-      position: absolute;
-      height: 90px;
-      width: 100px;
-      margin: -180px 0px 110px 180px;
-      z-index: 200;
-      }
-     #informationModal{
-      height: 320px;
-      z-index: 50;
-      margin: 100px 0px 0px 25px;
-      }
-      #paragraphModal {
-        font-size: 20px;
-        margin:25px 0px 200px 0px;
-    }
-    
+@media screen and (max-width:548px){
+  .home{
+    background-size: 550px;
+  }
+  
+  .btnFirst {
+    width: 110px;
+    height: 31px;
+    margin: 310.5px 19px 0px 0px ;
+    font-size: 25px;
+  }
+  header .logotipe{
+    width: 260px;
+    height: 95px;
+  }
+  .barNavegation {
+    font-size: 18px;
+    padding: 0px;
+   }
+  .barNavegation1 {
+    font-size: 21px;
+    padding: 0px 10px;
+   }
+   .fa-bars{
+     font-size: 25px;
+    margin-left: 20px;
+    margin-top: 9px;
      
-        #paragraphModal h2 {
-          font-size: 20px;
-          margin: 10px 0px 25px 31px;
+  }
+  .fa-bars:active{
+    font-size: 25px;
+   }
+   
+  .buttonsNavegation {
+   padding-left: 0px;
+   }
+   .li{
+    font-size: 38px;
 
+  }
+  .iconBars1 {
+    margin: 25px 0px 0px -4px;
+}
+}
+@media screen and (max-width:360px){
+  .home{
+    background-size: 500px;
+  }
+  
+  .btnFirst {
+    width: 97px;
+    height: 25px;
+    margin: 310.5px 19px 0px 0px ;
+    font-size: 20px;
+  }
+  header .logotipe{
+    width: 255px;
+    height: 99px;
+  }
+  header .icon{
+      width: 60px;
+      height: 60px;
+      padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:348px){
+  
+  header .logotipe{
+    width: 270px;
+    height: 95px;
+  }
+  header .icon{
+      display: none;
+    }
+    .barNavegation {
+      font-size: 18px;
+      padding: 0px;
+     }
+    .barNavegation1 {
+      font-size: 21px;
+      padding: 0px 5px;
+     }
+     .fa-bars{
+     margin-left: 8px;
+     margin-top: 8px;
+   }
+   
+   #searchByName{
+    font-size: 14px;
+    width: 155px;
+  }
+  #searchByName:placeholder-shown{
+    width: 155px;
+  }
+  .modalContent{
+    width:288px;
+    }
+    #photoModal{
+      margin: -180px 0px 110px 150px;
       }
-      .modalInfo{
-        font-size:16px ;
-        border-bottom: none;      
-      }
-      #nameModal{
-        font-size: 34px;
-        height: 88px;
-        width: 315px;
-        margin: 220px 0px 0px -30px;
-      }
+    #paragraphModal {
+      font-size: 20px;
+      width: 299px;
+      margin:25px 0px 200px -28px;
+  }
+  #paragraphModal h2 {
+    font-size: 18px;
+    width: 222px;
+    margin: 10px 0px 25px 49px;
+
+}
+#nameModal{
+  font-size: 29px;
+  padding: 0px;
+  height: 88px;
+  width: 280px;
+  margin: 255px 0px 0px -30px;
+}
+
+
+
 }
 /* @media screen and (max-width:1024px) and (orientation: landscape){
 

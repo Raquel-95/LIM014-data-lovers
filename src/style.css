@@ -161,7 +161,37 @@ header .icon{
   box-shadow: 0 0 5px 5px red ;
   background-color: red ;
 }
+/************statistics************************/
+table{
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white;
+  border-collapse: collapse;
+}
 
+th{
+background-color: rgb(26, 100, 26);
+color: black;
+font-size: 20px;
+}
+
+td{
+  background-color: rgba(43, 198, 17, 0.5);
+}
+
+td,th{
+  border: 2px solid greenyellow;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#statisticsSection{
+  display: flex;
+  justify-content: center;
+}
 /* *******************************************************nav ** */
 
 .barNavegation{

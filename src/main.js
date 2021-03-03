@@ -318,3 +318,19 @@ for(var i = 0; i < selectTags.length; i++) {
 searchFilter();
 })
 
+// *************************go top button
+window.onscroll = function(){
+  // console.log(document.documentElement.onscroll);
+  if(document.documentElement.scrollTop > 1000){
+    document.querySelector('.goTopContainer').classList.add('show');
+  }else{
+    document.querySelector('.goTopContainer').classList.remove('show');
+  }
+}
+
+document.querySelector('.goTopContainer').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});

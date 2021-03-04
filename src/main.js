@@ -215,12 +215,12 @@ function statisticsInfo(){
 // Hamburguer show advancedFilter
 const iconMenu = document.querySelector('#iconBars'),
 menu = document.querySelector('#advancedFilter');
-iconMenu.addEventListener('click', (e) => {
+iconMenu.addEventListener('click', () => {
   menu.classList.toggle('active');
 })
 
 const iconMenuSecond = document.querySelector('#iconBars1');
-iconMenuSecond.addEventListener('click', (e) => {
+iconMenuSecond.addEventListener('click', () => {
   menu.classList.toggle('active');
 })
 document.querySelector('#iconBars').addEventListener('click', showFilter);
@@ -274,7 +274,7 @@ orderByEpisodes.addEventListener("change", () => {
   searchFilter();
 });
 
-searchBar.addEventListener('keyup', (e) => {
+searchBar.addEventListener('keyup', () => {
   searchFilter();
   
 });
@@ -298,7 +298,7 @@ function searchFilter() {
     orderAll.classList.add("hide");
     // notFound.style.visibility = "visible";
   } else {
-    notFound.classList.add("hide");;
+    notFound.classList.add("hide");
     orderAll.classList.remove("hide");
     // notFound.style.visibility = "hidden";
   }
@@ -388,8 +388,8 @@ aggregateCalculation();
 
 function chartStatus (alive, dead, statusUnknown) {
     Chart.defaults.global.defaultFontColor = 'white';
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
+    let ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Alive', 'Dead', 'Unknown'],
@@ -422,8 +422,8 @@ function chartStatus (alive, dead, statusUnknown) {
 }
 
 function chartGender (female, male, genderless, unknownGender) {
-  var ctx = document.getElementById('myChartGender').getContext('2d');
-  var myChart = new Chart(ctx, {
+  let ctx = document.getElementById('myChartGender').getContext('2d');
+  new Chart(ctx, {
       type: 'pie',
       data: {
           labels: ['Female', 'Male', 'Genderless', 'Unknown'],

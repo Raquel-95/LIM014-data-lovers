@@ -312,12 +312,12 @@
 
     </section>
     
-
-
   </section> -->
 
+  <!--Tabla : calculo agregado-->
+
   <section id = "statisticsSection" class="hide">
-  
+  <section id = "stadisticsStatus">
   <table>
     <tr>
       <th>Status</th>
@@ -336,13 +336,48 @@
     </tr>
     <tr>
       <td>Unknown</td>
-      <td id="unknown"></td>
-      <td id="percentUnknown"></td>
+      <td id="statusUnknown"></td>
+      <td id="percentStatusUnknown"></td>
     </tr>
   </table>
-  <div class="chart-container" style="position: relative; height:300px; width:600px">
+  <section class="chart-container">
     <canvas id="myChart"></canvas>
-  </div>
+  </section>
+</section>
+
+<section id="statisticsGender">
+  <table>
+    <tr>
+      <th>Gender</th>
+      <th>Sum</th>
+      <th>Percent</th>
+    </tr>
+    <tr>
+      <td>Female</td>
+      <td id="female"></td>
+      <td id="percentFemale"></td>
+    </tr>
+    <tr>
+      <td>Male</td>
+      <td id="male"></td>
+      <td id="percentMale"></td>
+    </tr>
+    <tr>
+      <td>Genderless</td>
+      <td id="genderless"></td>
+      <td id="percentGenderless"></td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td id="unknownGender"></td>
+      <td id="percentUnknownGender"></td>
+    </tr>
+  </table>
+  <section class="chart-container">
+    <canvas id="myChartGender"></canvas>
+  </section>
+</section>  
+
 </section>
 
   <!--footer section -->

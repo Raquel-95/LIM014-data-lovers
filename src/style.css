@@ -188,9 +188,23 @@ td,th{
   padding-bottom: 10px;
 }
 
-#statisticsSection{
+#stadisticsStatus{
   display: flex;
   justify-content: center;
+}
+
+#statisticsGender{
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container{
+  position: relative; 
+  height:300px; 
+  width:600px;
+  border: 2px solid greenyellow;
+  border-radius: 25px;
+  margin: 20px;
 }
 /* *******************************************************nav ** */
 

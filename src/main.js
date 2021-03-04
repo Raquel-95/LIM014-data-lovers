@@ -219,6 +219,11 @@ iconMenu.addEventListener('click', () => {
   menu.classList.toggle('active');
 })
 
+const iconHome = document.querySelector('#homeButton');
+iconHome.addEventListener('click', () => {
+  showFilter();
+})
+
 const iconMenuSecond = document.querySelector('#iconBars1');
 iconMenuSecond.addEventListener('click', () => {
   menu.classList.toggle('active');

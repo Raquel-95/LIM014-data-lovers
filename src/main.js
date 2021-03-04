@@ -212,6 +212,7 @@ function statisticsInfo(){
 
 }
 
+
 // Hamburguer show advancedFilter
 const iconMenu = document.querySelector('#iconBars'),
 menu = document.querySelector('#advancedFilter');
@@ -318,3 +319,76 @@ for(var i = 0; i < selectTags.length; i++) {
 searchFilter();
 })
 
+
+/*******************calculo agrega*************/
+
+function aggregateCalculation () {
+  let calculation = { //lista para que los filtros inicien vacios.
+    name: '',
+    order: '',
+    status: '',
+    species: '',
+    gender: '',
+    origin: '',
+    episode: ''
+  }
+  
+calculation.status = 'Alive';
+let resultCalculation = filterData(allCharacters, calculation);
+let alive = document.getElementById('alive');
+alive.innerHTML = resultCalculation.length;
+let percentAlive = document.getElementById('percentAlive');
+percentAlive.innerHTML = Math.round(resultCalculation.length/allCharacters.length*100) + "%";
+
+
+calculation.status = 'Dead';
+resultCalculation = filterData(allCharacters, calculation);
+let dead = document.getElementById('dead');
+dead.innerHTML = resultCalculation.length;
+let percentDead = document.getElementById('percentDead');
+percentDead.innerHTML = Math.round(resultCalculation.length/allCharacters.length*100) + "%";
+
+calculation.status = 'unknown';
+resultCalculation = filterData(allCharacters, calculation);
+let unknown = document.getElementById('unknown');
+unknown.innerHTML = resultCalculation.length;
+let percentUnknown = document.getElementById('percentUnknown')
+percentUnknown.innerHTML = Math.round(resultCalculation.length/allCharacters.length*100) + "%";
+
+chartStatus(alive.innerHTML, dead.innerHTML, unknown.innerHTML);
+}
+aggregateCalculation();
+
+function chartStatus (alive, dead, unknown) {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Alive', 'Dead', 'Unknown'],
+            datasets: [{
+                label: 'Status',
+                data: [alive, dead, unknown],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+}

@@ -116,14 +116,26 @@ En la barra de navegación se puede acceder a tres opciones: About, donde hay in
 
 ##### Prototipo de baja fidelidad
 Sketch de la solución
-Desktop
+**Desktop**
 ![Banner](https://i.imgur.com/jRH9IZW.jpg)
-Movile
+**Modal**
+![Banner](https://i.imgur.com/Onyg1o8.jpg)
+**Movile**
 ![Banner](https://i.imgur.com/O1tULo2.jpg)
-
+**Mejoras en la propuesta final:**
+- Implementación de la pantalla de inicio.
+![Banner](https://i.imgur.com/rnD33eR.jpg)
 ##### Prototipo de alta fidelidad
-Diseño de la Interfaz de Usuario
+Diseño de la Interfaz de Usuario:
+[Figma: Desktop](https://www.figma.com/file/1Lwf3mKnS7NLDSKOVpWkvF/Rick-y-morty-pc?node-id=0%3A1)
+[Figma: Movile](https://www.figma.com/file/wqaeab4MosleGeD2Hk5H9x/Rick-y-morty-mobile?node-id=55%3A168)
+
 ##### Testeos de usabilidad
-link a Zeplin
-Durante el reto deberás hacer tests de usabilidad con distintos usuarios, y en base a los resultados, deberás iterar tus diseños. Cuéntanos qué problemas de usabilidad detectaste a través de los tests y cómo los mejoraste en tu propuesta final.
-listado de problemas que detectaste a través de tests de usabilidad en el 
+link a Zeplin????
+Se realizaron tests de usabilidad con distintos usuarios, mediante el feedback con compañeras del bootcamp y en base a los resultados iteramos los diseños.
+
+*Problemas de usabilidad detectados a través de los tests:*
+- Tamaño de la letra.
+- Agregar una pantalla de inicio.
+- Efecto mouse hover en las tarjetas.
+- Botón clean filter.

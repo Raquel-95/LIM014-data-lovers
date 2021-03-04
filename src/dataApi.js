@@ -1,14 +1,14 @@
 
-function cargarUsuarios(){
-    fetch('./data/rickandmorty/rickandmorty.json')
-}
+// function cargarUsuarios(){
+//     fetch('./data/rickandmorty/rickandmorty.json')
+// }
 
 
 
-fetch('./data/rickandmorty/rickandmorty.json', {
+// fetch('./data/rickandmorty/rickandmorty.json', {
 
-})
-.then((response) => response.json())
-.then( data => {
-    debugger
-})
+// })
+// .then((response) => response.json())
+// .then( data => {
+//     debugger
+// })

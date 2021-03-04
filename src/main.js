@@ -67,7 +67,7 @@ function drawCharactersPage(index, arrayOfCharacters) {
 
     elementDiv.innerHTML = `
       <h3 class="h3List" >${result.name}</h3>
-      <img class="imageList" src="${result.image}" alt="${result.name}"/>
+      <img class="imageList" loading="lazy" src="${result.image}" alt="${result.name}"/>
       <section class="dataCard">
         <p> Status: <span> ${result.status} </span></p>
         <p> Especie: <span> ${result.species} </span></p>
@@ -148,7 +148,7 @@ let displayPrincipalNav = document.getElementById("nav");
 let displaySubheader = document.getElementById("subheaderSection");
 let displayCharacters = document.getElementById("charactersSection");
 let displayFooter = document.getElementById("footerSection");
-let displayAbout = document.getElementById("aboutSection");
+// let displayAbout = document.getElementById("aboutSection");
 let displayStatistics = document.getElementById("statisticsSection");
 let displayAdvancedFilter = document.getElementById("advancedFilter");
 
@@ -216,14 +216,15 @@ function statisticsInfo(){
 // Hamburguer show advancedFilter
 const iconMenu = document.querySelector('#iconBars'),
 menu = document.querySelector('#advancedFilter');
-iconMenu.addEventListener('click', (e) => {
+iconMenu.addEventListener('click', () => {
   menu.classList.toggle('active');
 })
 
 const iconMenuSecond = document.querySelector('#iconBars1');
-iconMenuSecond.addEventListener('click', (e) => {
+iconMenuSecond.addEventListener('click', () => {
   menu.classList.toggle('active');
 })
+
 document.querySelector('#iconBars').addEventListener('click', showFilter);
 
 function showFilter(){
@@ -275,7 +276,7 @@ orderByEpisodes.addEventListener("change", () => {
   searchFilter();
 });
 
-searchBar.addEventListener('keyup', (e) => {
+searchBar.addEventListener('keyup', () => {
   searchFilter();
   
 });
@@ -299,7 +300,7 @@ function searchFilter() {
     orderAll.classList.add("hide");
     // notFound.style.visibility = "visible";
   } else {
-    notFound.classList.add("hide");;
+    notFound.classList.add("hide");
     orderAll.classList.remove("hide");
     // notFound.style.visibility = "hidden";
   }

@@ -51,7 +51,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.name < b.name) {
         return -1;
       }
-      // return 0;
+      return 0;
     })
   }
   else if (sortBy === "name" && sortOrder === "orderZtoA") {
@@ -62,7 +62,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.name > b.name) {
         return -1;
       }
-      // return 0;
+      return 0;
     })
   }
 
@@ -74,7 +74,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.id < b.id) {
         return -1;
       }
-      // return 0;
+      return 0;
     })
   }
 

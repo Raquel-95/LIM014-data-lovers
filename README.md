@@ -21,7 +21,9 @@ El usuario quiere encontrar información de un personaje pero no tiene una herra
 Aplicación web de búsqueda de personajes de "Rick and Morty" por: nombre, estado de vida, género, especie, lugar de origen,  y episodios en los que aparece. Además tiene una sección de estadísticas sobre datos de los personajes, una sección con información sobre la serie y un enlace para poder ver los caítulos de la serie.
 
 #### Proceso de diseño
-
+El diseño de la página web se centra en mostrar los personajes, ordenados y en páginas para una búsqueda rápida y fácil.
+Como filtro principal está el filtro por nombre para el que elegimos usar una caja de texto porque permite ingresar rápidamente la búsqueda con el teclado.
+Además agregamos un 
 
 #### Cómo resuelve los problemas del usuario
 La aplicacion web tiene:
@@ -125,13 +127,14 @@ Sketch de la solución
 **Mejoras en la propuesta final:**
 - Implementación de la pantalla de inicio.
 ![Banner](https://i.imgur.com/rnD33eR.jpg)
+![Banner](https://imgur.com/iystcVF.jpg)
 ##### Prototipo de alta fidelidad
 Diseño de la Interfaz de Usuario:
 [Figma: Desktop](https://www.figma.com/file/1Lwf3mKnS7NLDSKOVpWkvF/Rick-y-morty-pc?node-id=0%3A1)
 [Figma: Movile](https://www.figma.com/file/wqaeab4MosleGeD2Hk5H9x/Rick-y-morty-mobile?node-id=55%3A168)
 
 ##### Testeos de usabilidad
-link a Zeplin????
+[Link a Zeplin](https://zpl.io/bL6rwLm)
 Se realizaron tests de usabilidad con distintos usuarios, mediante el feedback con compañeras del bootcamp y en base a los resultados iteramos los diseños.
 
 *Problemas de usabilidad detectados a través de los tests:*

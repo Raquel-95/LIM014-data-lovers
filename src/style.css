@@ -38,6 +38,9 @@
  
 }
 
+#homeButton{
+  cursor: pointer;
+}
 
 .btnFirst{
   transform: rotate(1deg);

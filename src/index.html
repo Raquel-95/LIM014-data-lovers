@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--sitio web de donde salen los iconos de redes sociales-->
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script> <!--libreria chart.js-->
 </head>
 
 
@@ -318,15 +319,34 @@
 
   </section> -->
 
-  <section id="statisticsSection" class="hide">
-    <canvas id="chart" width="800" height="400"></canvas>
-  </section>
-  <section class="goTopContainer">
-    <button class="goTopButton">
-      <i class="fa fa-chevron-up"></i>
-
-    </button>
-  </section>
+  <section id = "statisticsSection" class="hide">
+  
+  <table>
+    <tr>
+      <th>Status</th>
+      <th>Sum</th>
+      <th>Percent</th>
+    </tr>
+    <tr>
+      <td>Alive</td>
+      <td id="alive"></td>
+      <td id="percentAlive"></td>
+    </tr>
+    <tr>
+      <td>Dead</td>
+      <td id="dead"></td>
+      <td id="percentDead"></td>
+    </tr>
+    <tr>
+      <td>Unknown</td>
+      <td id="unknown"></td>
+      <td id="percentUnknown"></td>
+    </tr>
+  </table>
+  <div class="chart-container" style="position: relative; height:300px; width:600px">
+    <canvas id="myChart"></canvas>
+  </div>
+</section>
 
   <!--footer section -->
   <footer class="hide" id="footerSection">
@@ -353,12 +373,12 @@
       
     </section>
   </footer>
-  <script src="main.js" type="module"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js">
-  </script>
-  <script src="mainApi.js" type="module">
-  </script>
-  
-</body>
 
+  <script src="main.js" type="module" document.addEventListener("DOMContentLoaded", drawCharactersPage);></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <script src="mainApi.js" type="module"></script>
+  </body>
+</html>
+
+</body>
 </html>

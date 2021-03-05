@@ -38,6 +38,9 @@
  
 }
 
+#homeButton{
+  cursor: pointer;
+}
 
 .btnFirst{
   transform: rotate(1deg);
@@ -181,9 +184,23 @@ td,th{
   padding-bottom: 10px;
 }
 
-#statisticsSection{
+#stadisticsStatus{
   display: flex;
   justify-content: center;
+}
+
+#statisticsGender{
+  display: flex;
+  justify-content: center;
+}
+
+.chart-container{
+  position: relative; 
+  height:300px; 
+  width:600px;
+  border: 2px solid greenyellow;
+  border-radius: 25px;
+  margin: 20px;
 }
 /* *******************************************************nav ** */
 
@@ -295,7 +312,7 @@ span.active{
   /* margin-right: 30px; */
   /* para eliminar los puntos de las etiquetas ul y li  */
   list-style:none;
-  width: 500px;
+  width: 550px;
   justify-content: center;
 
  }

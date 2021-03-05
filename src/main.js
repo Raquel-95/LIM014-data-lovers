@@ -132,6 +132,7 @@ function showModal(item) {
 
   let characterEpisode = document.getElementById('episodeModal');
   characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
+  // console.log(episodes);
 }
 
 const close = document.getElementById("xClose");

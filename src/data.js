@@ -33,8 +33,8 @@ export const filterData = (allCharacters, filterConfig) => {
         }
       });
     });
-
     result = result2;
+    // console.log(result2);
   }
 
   return result;
@@ -42,7 +42,7 @@ export const filterData = (allCharacters, filterConfig) => {
 
 // Filtrado por orden A-Z/ Z-A
 export const dataSort = (allCharacters, sortBy, sortOrder) => {
-  //console.log("entre dibidubsdip");
+  // console.log(allCharacters);
   if (sortBy === "name" && sortOrder === "orderAtoZ") {
     return allCharacters.sort((a, b) => {
       if (a.name > b.name) {
@@ -51,7 +51,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.name < b.name) {
         return -1;
       }
-      return 0;
+      // return 0;
     })
   }
   else if (sortBy === "name" && sortOrder === "orderZtoA") {
@@ -62,7 +62,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.name > b.name) {
         return -1;
       }
-      return 0;
+      // return 0;
     })
   }
 
@@ -74,7 +74,7 @@ export const dataSort = (allCharacters, sortBy, sortOrder) => {
       else if (a.id < b.id) {
         return -1;
       }
-      return 0;
+      // return 0;
     })
   }
 

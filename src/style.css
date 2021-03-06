@@ -217,14 +217,16 @@ td,th{
 
 }
 .fa-bars{
+  display: flex;
   z-index: 10;
    color: white;
    font-size: 35px;
    align-self: center;
+   justify-content: center;
    margin-left: 20px;
-   padding-top: 10px;
+   padding-top: 15px;
    cursor: pointer;
-   display: flex;
+  
    
 }
 .fa-bars:hover{
@@ -1023,9 +1025,9 @@ footer .allRightsReserved{
     padding: 0px 10px;
    }
    .fa-bars{
-     font-size: 25px;
+     font-size: 32px;
     margin-left: 20px;
-    margin-top: 9px;
+    margin-top: 0px;
      
   }
   .fa-bars:active{
@@ -1037,8 +1039,9 @@ footer .allRightsReserved{
   display: flex;
   justify-content: flex-end;
    }
-   .li{
-    font-size: 38px;
+
+  .li{
+    font-size: 50px;
 
   }
   .iconBars1 {
@@ -1060,7 +1063,7 @@ footer .allRightsReserved{
  } */
 
 }
-@media screen and (max-width:426px){
+@media screen and (max-width:435px){
   .homeNavegation{
     display: none;
   }
@@ -1086,7 +1089,7 @@ footer .allRightsReserved{
     }
     
 }
-@media screen and (max-width:348px){
+@media screen and (max-width:359px){
   
   header .logotipe{
     width: 270px;
@@ -1103,10 +1106,6 @@ footer .allRightsReserved{
       font-size: 21px;
       padding: 0px 5px;
      }
-     .fa-bars{
-     margin-left: 8px;
-     margin-top: 8px;
-   }
    
    #searchByName{
     font-size: 14px;
@@ -1144,8 +1143,12 @@ h2 {
     width: 280px;
     margin: 210px 0px 0px -30px;
   }
-
-
+.watch{
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  overflow: hidden;
+  width: 78px;
+}
 }
 /* @media screen and (max-width:1024px) and (orientation: landscape){
 

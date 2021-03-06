@@ -134,7 +134,7 @@ header .icon{
 /*************button clean filter************/
 #buttonCleanFilter{
   color: white;
-  background-color: red;
+  background-color: rgb(214, 13, 13);
   width: 100px;
   height: 40px;
   padding: 0px;
@@ -147,8 +147,8 @@ header .icon{
   cursor: pointer;
 }
 #buttonCleanFilter:hover{
-  box-shadow: 0 0 5px 5px red ;
-  background-color: red ;
+  box-shadow: 0 0 5px 5px rgb(214, 13, 13) ;
+  background-color: rgb(214, 13, 13) ;
 }
 /************statistics************************/
 table{
@@ -180,11 +180,13 @@ td,th{
 #stadisticsStatus{
   display: flex;
   justify-content: center;
+  margin: 80px 0px;
 }
 
 #statisticsGender{
   display: flex;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .chart-container{
@@ -243,15 +245,19 @@ td,th{
   width: 100%;
   font-size: 45px;
   height: 50px;
-  margin: 25px 0px 0px 10px;
+  margin: 25px 0px 0px 20px;
 }
 .li{
-  color: #89cf10;
+  color:rgba(214, 13, 13, 0.829);
   text-shadow: 
   1px  0px 0px black,
   0px  1px 0px black,
  -1px  0px 0px black,
   0px -2px 0px black;
+}
+
+.li:hover{
+  color:rgb(255, 7, 7);
 }
  #advancedFilter{
   background-color: #ffffffe5;
@@ -318,7 +324,7 @@ span.active{
  .barNavegation1:active{
   color:#89cf10;
   text-shadow: 1.9px 1.9px #52663ab0;
-  font-size: 24px;
+  
  }
 
  .lineSpace{
@@ -434,6 +440,8 @@ div:active{
   .modalContent{
     background-color:white;
     align-self: center;
+    /* display: flex;
+    justify-content: center; */
     width:620px;
     height: auto;
     margin: 10% auto;
@@ -462,17 +470,20 @@ div:active{
   #informationModal{
     display: flex;
     align-items: center;
-    margin:0px 20px 0px 0px;
+    margin:-5px 0px 0px 0px;
     flex-wrap: wrap;
     }
 
-  #paragraphModal h2 {
+  .titleId{
+    display: flex;
+    justify-content: center;
+  }
+
+  h2{
     /* display: flex; */
-    font-size: 30px;
+    font-size: 24px;
     font-family: 'Roboto', sans-serif;
-    margin: 12px 0px 25px 0px;
-    /* margin-top: 0%;
-    margin-bottom: 0%; */
+    margin: 20px 0px 0px 0px;
     width: 320px;
     text-align: center;
     border: 1px solid #2A2C6C;
@@ -521,7 +532,7 @@ div:active{
     width: 608px;
     text-shadow: 2px 2px black;
     height: 128px;
-    margin: 50px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     background-image: url('images/backgroundModal.png');
     border: 7px solid #2A2C6C;
     border-radius: 0px 0px 28px 28px;
@@ -534,7 +545,7 @@ div:active{
   display:flex;
   width: 35px;
   height: 35px;
-  background: red;
+  background: rgb(214, 13, 13);
   color: white;
   line-height: 25px;
   cursor: pointer;
@@ -775,7 +786,25 @@ footer .allRightsReserved{
 .hide{
   display: none !important; 
 }
+@media screen and (max-width:1038px){
 
+  #stadisticsStatus{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+  }
+  .chart-container {
+    position: relative;
+    margin-top: 60px;
+}
+  #statisticsGender{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+  }
+}
 
  @media screen and (max-width:768px){
 
@@ -862,16 +891,16 @@ footer .allRightsReserved{
   #photoModal{
     height: 200px;
     width: 200px;
-    /* margin: 65px 20px 18px 15px; */
+    margin-top: 95px;
     }
     #paragraphModal{
       position: absolute;
-      margin: -91px 0px 0px 230px;
+      margin: -30px 0px 0px 230px;
     /* display: inline-block; */
      width: 300px;
     }
   
-    #paragraphModal h2 {
+    h2 {
       /* display: flex; */
       font-size: 23px;
       width: 250px;
@@ -882,7 +911,7 @@ footer .allRightsReserved{
     }
     #nameModal{
       width: 538px;
-      margin: 90px 0px 0px 0px;
+      margin: 25px 0px 0px 0px;
       font-size: 36px;
       height: 80px;
     }
@@ -913,6 +942,17 @@ footer .allRightsReserved{
   a {
     font-size: 14px;
   }
+  #informationModal{
+    margin:-80px 0px 0px 0px;
+    }
+  .chart-container {
+    /* position: relative; */
+    margin-top: 60px;
+    height:250px; 
+    width:460px;
+
+}
+
 }
 @media screen and (max-width:602px){
   .modalContent{
@@ -927,23 +967,23 @@ footer .allRightsReserved{
       position: absolute;
       height: 90px;
       width: 100px;
-      margin: -180px 0px 110px 180px;
+      margin: -80px 0px 110px 180px;
       z-index: 200;
       }
      #informationModal{
       height: 380px;
       z-index: 100;
-      margin: 65px 0px 0px 25px;
+      margin: -60px 0px 0px 25px;
       }
       #paragraphModal {
         font-size: 20px;
-        margin:25px 0px 200px 0px;
+        margin:0px 0px 0px 0px;
     }
     
      
-        #paragraphModal h2 {
+    h2 {
           font-size: 20px;
-          margin: 10px 0px 25px 31px;
+          margin: 15px 0px 25px 31px;
 
       }
       .modalInfo{
@@ -954,10 +994,12 @@ footer .allRightsReserved{
         font-size: 34px;
         height: 88px;
         width: 315px;
-        margin: 255px 0px 0px -30px;
+        margin: 330px 0px 0px -30px;
       }
 }
-@media screen and (max-width:548px){
+
+
+@media screen and (max-width:568px){
   .home{
     background-size: 550px;
   }
@@ -972,9 +1014,9 @@ footer .allRightsReserved{
     width: 260px;
     height: 95px;
   }
+
   .barNavegation {
     font-size: 18px;
-    padding: 0px;
    }
   .barNavegation1 {
     font-size: 21px;
@@ -992,20 +1034,41 @@ footer .allRightsReserved{
    
   .buttonsNavegation {
    padding-left: 0px;
+  display: flex;
+  justify-content: flex-end;
    }
    .li{
     font-size: 38px;
 
   }
   .iconBars1 {
-    margin: 25px 0px 0px -4px;
+    margin: 25px 0px 0px 14px;
 }
+ .chart-container {
+   display: none;
+ }
+
+}
+@media screen and (max-width:473px){
+  /* .chart-container {
+    height:200px; 
+    width:350px;
+ } */
+ /* #myChart{
+  height:185px; 
+  width:350px;
+ } */
+
+}
+@media screen and (max-width:426px){
+  .homeNavegation{
+    display: none;
+  }
 }
 @media screen and (max-width:360px){
   .home{
     background-size: 500px;
   }
-  
   .btnFirst {
     width: 97px;
     height: 25px;
@@ -1021,6 +1084,7 @@ footer .allRightsReserved{
       height: 60px;
       padding-bottom: 20px;
     }
+    
 }
 @media screen and (max-width:348px){
   
@@ -1055,27 +1119,31 @@ footer .allRightsReserved{
     width:288px;
     }
     #photoModal{
-      margin: -180px 0px 110px 150px;
+      margin: -250px 0px 110px 150px;
       }
     #paragraphModal {
       font-size: 20px;
       width: 299px;
       margin:25px 0px 200px -28px;
   }
-  #paragraphModal h2 {
-    font-size: 18px;
-    width: 222px;
-    margin: 10px 0px 25px 49px;
 
-}
-#nameModal{
-  font-size: 29px;
-  padding: 0px;
-  height: 88px;
-  width: 280px;
-  margin: 255px 0px 0px -30px;
-}
+ #informationModal{
+  height: 380px;
+  z-index: 100;
+  margin: 25px 0px 0px 25px;
+  } 
+h2 {
+      font-size: 20px;
+      margin: 15px 0px 25px 31px;
+      width: 220px;
 
+  }
+  #nameModal{
+    font-size: 29px;
+    height: 88px;
+    width: 280px;
+    margin: 210px 0px 0px -30px;
+  }
 
 
 }

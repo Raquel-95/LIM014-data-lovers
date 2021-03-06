@@ -43,7 +43,7 @@
     <section id="iconBars" class="iconBars"><i class="fa fa-bars"></i></section>
 
     <span id="advancedFilter" class="active">
-      <section id="iconBars1" class="iconBars1"><i class="fa fa-bars li"  ></i></section>
+      <section id="iconBars1" class="iconBars1"><i class="fa fa-close li"  ></i></section>
 
 
       <section class="filterSelects">
@@ -159,7 +159,7 @@
       <!-- Attribute Values
           _blank	Opens the linked document in a new window or tab
            -->
-      <li class="boxHome line">
+      <li class="boxHome line homeNavegation">
         <a class="barNavegation1" id="homeButton" target="_blank">Home</a>
       </li>
       <span class="lineSpace">|</span>
@@ -171,8 +171,8 @@
         <a class="barNavegation1" id="statisticsbutton" href="#">Statistics</a>
       </li>
       <span class="lineSpace">|</span>
-      <li class="boxBarNavegation">
-        <a class="barNavegation1" href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch online</a>
+      <li class="boxBarNavegation watch">
+        <a class="barNavegation1 " href="https://www.adultswim.com/streams/rick-and-morty" target="_blank">Watch online</a>
       </li>
     </ul>
   </nav>
@@ -206,10 +206,14 @@
       <section id="myModal" class="modal">
         <section class="modalContent">
           <p id="xClose" class="close">X</p>
+          <section class="titleId">
+            <h2>IDENTIFICATION CARD</h2>
+          </section>
           <section id="informationModal">
             <img id="photoModal" src="main.js" alt="">
+            
             <section id="paragraphModal">
-              <h2>IDENTIFICATION CARD</h2>
+              
               <p id="statusModal" class="modalInfo">Status:</p>
               <p id="speciesModal" class="modalInfo">Species:</p>
               <p id="typeModal" class="modalInfo">Type:</p>
@@ -381,7 +385,7 @@
     </section>  
   </section>
 
-  <section class="goTopContainer">
+  <section class="goTopContainer" id="goTopContainer">
     <button class="goTopButton">
       <i class="fa fa-chevron-up"></i>
     </button>

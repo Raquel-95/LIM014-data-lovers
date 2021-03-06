@@ -151,6 +151,7 @@ let displayFooter = document.getElementById("footerSection");
 // let displayAbout = document.getElementById("aboutSection");
 let displayStatistics = document.getElementById("statisticsSection");
 let displayAdvancedFilter = document.getElementById("advancedFilter");
+let displayTop = document.getElementById("goTopContainer");
 
 // ***********************************************************click start home**************1
 document.querySelector('#btnFirst').addEventListener('click', getEnter);
@@ -209,7 +210,8 @@ function statisticsInfo(){
   // ********************************************remove oothers about and stat******
   // displayAbout.classList.add("hide");
   displayStatistics.classList.remove("hide");
-
+  displayTop.classList.add("hide");
+  displayAdvancedFilter.classList.add("hide");
 }
 
 
@@ -237,6 +239,8 @@ function showFilter(){
   displayCharacters.classList.remove("hide");
   displayAdvancedFilter.classList.remove("hide");
   displayStatistics.classList.add("hide");
+  displayTop.classList.remove("hide");
+  
 
 }
 

@@ -131,7 +131,6 @@ function showModal(item) {
 
   let characterEpisode = document.getElementById('episodeModal');
   characterEpisode.innerHTML = "<b>Episode: </b>" + episodes;
-  // console.log(episodes);
 }
 
 const close = document.getElementById("xClose");
@@ -240,8 +239,6 @@ function showFilter(){
   displayAdvancedFilter.classList.remove("hide");
   displayStatistics.classList.add("hide");
   displayTop.classList.remove("hide");
-  
-
 }
 
 
@@ -327,8 +324,6 @@ for(var i = 0; i < selectTags.length; i++) {
 }  
 searchFilter();
 })
-
-
 
 /*******************calculo agrega*************/
 

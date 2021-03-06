@@ -1121,6 +1121,7 @@ footer .allRightsReserved{
       margin: -250px 0px 110px 150px;
       }
     #paragraphModal {
+  
       font-size: 20px;
       width: 299px;
       margin:25px 0px 200px -28px;
@@ -1150,7 +1151,7 @@ h2 {
   width: 78px;
 }
 }
-@media screen and (max-width:1024px) and (orientation: landscape){
+@media screen and (min-width:455px) and (max-width:600px) and (orientation: landscape){
   #advancedFilter {
     width: 479px;
     height: 319px;
@@ -1215,4 +1216,59 @@ div:hover {
   margin: 0px 0px 0px 11px;
   width: 180px;
 }
+#nameModal{
+  display: none;
+}
+}
+@media screen  and (min-width:601px) and (max-width:768px)  and (orientation: landscape){
+  .modalContent {
+    width: 445px;
+    height: 270px;
+    
+  }
+  
+  #episodeModal{
+    display: none;
+  }
+  #informationModal{
+    margin: 90px 0px 0px -210px;
+    
+    }
+    #photoModal{
+      width: 120px;
+      height: 120px;
+      margin: -90px 0px 0px 500px;
+    }
+    .dataCard p {
+      display: none;
+    }
+    div {
+     
+      margin: 25px 20px 0px 0px;
+      width: 185px;
+      height: 270px;
+  }
+  .h3List {
+    width: 185px;
+    margin: 15px 0px 10px 0px;
+    
+  }
+  div:hover {
+     
+    margin: 25px 9px 0px 0px;
+    width: 185px;
+    height: 270px;
+  }
+  .imageList {
+    margin: 0px 0px 0px 8px;
+    width: 170px;
+  }
+  #nameModal{
+    display: none;
+  }
+  .modalInfo{
+    border: none;  
+  }
+
+
 }

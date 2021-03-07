@@ -595,6 +595,9 @@ div:active{
     width: 100%;
     height: 35.30%;
 }
+
+
+
 #buttonsContainer button{
   color: white;
   background-color:#2596be;
@@ -616,6 +619,11 @@ div:active{
   border: 3px inset #96be25;
   box-shadow: 0 0 15px 4px greenyellow ;
   color: greenyellow;
+}
+
+#buttonsContainer .active{
+  background:red;
+  color:white;
 }
 
 body .navegation{

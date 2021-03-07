@@ -23,7 +23,13 @@ Aplicación web de búsqueda de personajes de "Rick and Morty" por: nombre, esta
 #### Proceso de diseño
 El diseño de la página web se centra en mostrar los personajes, ordenados y en páginas para una búsqueda rápida y fácil.
 Como filtro principal está el filtro por nombre para el que elegimos usar una caja de texto porque permite ingresar rápidamente la búsqueda con el teclado.
-Además agregamos un 
+Además agregamos un elemento select para elegir un orden alfabético, que puede ser de A-Z y de Z-A.
+El filtro avanzado está conformado por una sección con etiquetas select y opciones de cada filtro por: status, species, gender, origin, episodes. Se organizó de esta forma por la facilidad de uso y rapidez de búsqueda de la información que quiere encontrar, en la parte inferior se agregó un botón para limpiar todos los filtros con etiqueta select para poder hacer una nueva búsqueda desde cero. 
+La barra de navegación tiene 4 botones:
+- "Home" es un botón que nos lleva a la página inicial con todos los personajes. 
+- "Statistics" es un botón que nos lleva a una pantalla donde están los calculos agregados con datos de interés sobre características de los personajes de "R&M".
+- "About" es un botón que nos lleva a una url con [información sobre "R&M"](https://rickandmorty.fandom.com/wiki/Rick_and_Morty_(TV_series))
+- "Watch Online" es un botón que nos lleva a una url de los [capitulos de "R&M"](https://www.adultswim.com/streams/rick-and-morty) de la página de adultswim de manera gratuita.
 
 #### Cómo resuelve los problemas del usuario
 La aplicacion web tiene:
@@ -127,6 +133,7 @@ Sketch de la solución
 **Mejoras en la propuesta final:**
 - Implementación de la pantalla de inicio.
 ![Banner](https://i.imgur.com/rnD33eR.jpg)
+- Implementación del apartado de estadísticas.
 ![Banner](https://imgur.com/iystcVF.jpg)
 ##### Prototipo de alta fidelidad
 Diseño de la Interfaz de Usuario:

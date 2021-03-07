@@ -141,7 +141,7 @@ Diseño de la Interfaz de Usuario:
 [Figma: Movile](https://www.figma.com/file/wqaeab4MosleGeD2Hk5H9x/Rick-y-morty-mobile?node-id=55%3A168)
 
 ##### Testeos de usabilidad
-[Link a Zeplin](https://zpl.io/bL6rwLm)
+[Link a Zeplin](https://scene.zeplin.io/project/603db83201cfd737ae87e53b)
 Se realizaron tests de usabilidad con distintos usuarios, mediante el feedback con compañeras del bootcamp y en base a los resultados iteramos los diseños.
 
 *Problemas de usabilidad detectados a través de los tests:*

@@ -33,7 +33,7 @@ export const filterData = (allCharacters, filterConfig) => {
         }
       });
     });
-    result = result2;
+     result = result2;
     // console.log(result2);
   }
 
